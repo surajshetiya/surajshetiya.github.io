@@ -5,7 +5,23 @@ title: Numerical Issues
 
 Numerical issues that go undetected lead to unexpected issues. This is one of those tales of a bug that was lurking in the code and went undetected for long.
 
+I was tryin to fit a histogram to a set of data points. The bins of the [histogram](https://en.wikipedia.org/wiki/Histogram) were defined as below.
 
+S - Smallest
+L - Largest
+$$
+\begin{displaymath}
+G = \dfrac{L-S}{N-3}
+\end{displaymath}
+$$
+
+* Bin 0, covering interval (-infinity, S-G/2).
+* Bin 1, covering interval [S-G/2, S+G/2).
+* Bin 2, covering interval [S+G/2, S+G+G/2).
+* Bin 3, covering interval [S+G+G/2, S+2G+G/2).
+...
+* Bin N-2, covering interval [S+(N-4)G+G/2, S+(N-3)G+G/2). This interval is the same as [L-G/2, L+G/2).
+* Bin N-1, covering interval [S+(N-3)G+G/2, +infinity). This interval is the same as [L+G/2, +infinity).
 
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
