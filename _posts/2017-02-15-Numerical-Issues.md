@@ -3,7 +3,7 @@ layout: post
 title: Numerical Issues
 ---
 
-Numerical issues that go undiscovered lead to unexpected issues. This is of those tales of a bug that was lurking in the code and went undetected for long.
+Numerical issues that go undetected lead to unexpected issues. This is one of those tales of a bug that was lurking in the code and went undetected for long.
 
 
 
