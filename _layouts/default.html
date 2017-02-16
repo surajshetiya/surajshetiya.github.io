@@ -48,7 +48,7 @@
 			    <div class="navbar navbar-light navbar-fixed-left" style="background-color: #e3f2fd;">
 			      <ul class="nav navbar-nav">
 			      {% for post in site.posts limit:5  %}
-			      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			      <li><a href="{{ post.url }}" style="display:block;height:100%">{{ post.title }}</a></li>
 		    	      {% endfor %}
 			      </ul>
 			    </div>
