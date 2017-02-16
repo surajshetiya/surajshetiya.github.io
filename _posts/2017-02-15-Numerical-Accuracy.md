@@ -31,3 +31,9 @@ function [ b ] = mapToBucket( Min, Max, num, x )
     end
 end
 ```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
