@@ -10,7 +10,7 @@ I was tryin to fit a histogram to a set of data points. The bins of the [histogr
 S - Smallest  
 L - Largest  
 $$
-G = \dfrac{L-S}{N-3}
+G = \frac{L-S}{N-3}
 $$
 
 * Bin 0, covering interval (-infinity, S-G/2).
