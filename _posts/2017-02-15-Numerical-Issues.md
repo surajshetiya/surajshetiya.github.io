@@ -29,7 +29,7 @@ So, I could write forumlae for the bin as below,
 
 * Bin 1 : value < S - G/2
 * Bin N : value > S + (N-3)G + G/2
-* Bin (x > 1 and x < N) : $$ 2 + \floor{\frac{x - Min + \frac{G}{2}}{G}} $$
+* Bin (x > 1 and x < N) : $$ 2 + \lfloor\frac{x - Min + \frac{G}{2}}{G}\rfloor $$
 
 The above expression can be validated by taking a few end points of the bins.
 
