@@ -21,14 +21,7 @@
     <div class="wrapper-masthead">
       <div class="container-fluid">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav class="navbar navbar-default">
+          <nav class="navbar navbar-default navbar-fixed">
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
@@ -36,7 +29,7 @@
       </div>
     </div>
 
-    <div class="row container-fluid">
+    <div class="row container-fluid" style="offset-top:30px">
 	    <div class="col-md-3 hidden-phone">
 	    </div>
 	    <div id="main" role="main" class="col-md-9">
@@ -47,6 +40,11 @@
     <div class="wrapper-footer">
       <div class="container-fluid">
         <footer class="footer">
+          <a href="{{ site.baseurl }}/about" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
           {% include svg-icons.html %}
         </footer>
       </div>
