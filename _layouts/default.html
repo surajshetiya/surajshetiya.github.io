@@ -26,7 +26,7 @@
   <body>
     <div class="container-fluid">
 	<div class="row">
-        	<nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;">
+		<nav class="navbar navbar-default navbar-fixed-top">
 	  	<div class="col-md-2 hidden-phone">
 		</div>
 		<div class="col-md-9 hidden-phone">
@@ -48,7 +48,7 @@
 			    <div class="navbar navbar-light navbar-fixed-left" style="background-color: #e3f2fd;">
 			      <ul class="nav navbar-nav">
 			      {% for post in site.posts limit:5  %}
-			      <li><a href="{{ post.url }}" style="display:block;height:100%">{{ post.title }}</a></li>
+			      <a href="{{ post.url }}" style="display:block;height:100%"><li>{{ post.title }}</li></a>
 		    	      {% endfor %}
 			      </ul>
 			    </div>
