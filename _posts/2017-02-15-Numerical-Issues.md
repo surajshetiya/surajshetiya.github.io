@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Numerical Accuracy
+title: Numerical Issues
 ---
 
+Numerical issues that go undiscovered lead to unexpected issues. This is of those tales of a bug that was lurking in the code and went undetected for long.
+
+
+
 ``` matlab
-function [ b ] = mapToBucket1( Min, Max, num, x )
+function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
     if( x < Min - (G/2) )
     	b = 1;
@@ -17,7 +21,9 @@ function [ b ] = mapToBucket1( Min, Max, num, x )
     	b = 2 + floor(( x - Min + (G/2)) / G);
     end
 end
+```
 
+``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
     if( x < Min - (G/2) )
@@ -32,8 +38,3 @@ function [ b ] = mapToBucket( Min, Max, num, x )
 end
 ```
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
