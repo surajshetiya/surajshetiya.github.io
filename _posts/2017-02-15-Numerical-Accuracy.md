@@ -3,7 +3,7 @@ layout: post
 title: Numerical Accuracy
 ---
 
-{% hightlight matlab %}
+```matlab
 function [ b ] = mapToBucket1( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
     if( x < Min - (G/2) )
@@ -30,5 +30,4 @@ function [ b ] = mapToBucket( Min, Max, num, x )
         b = min(newmat(newmat ~= 0));
     end
 end
-
-{% endhightlight %}
+```
