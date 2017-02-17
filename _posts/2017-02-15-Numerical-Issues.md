@@ -104,7 +104,8 @@ K>>
 ```
 
 And I tried to use this higher precission of numbers in my code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify. And it was correct while being pretty slow.
-
+  
+The final version of my code below.
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
