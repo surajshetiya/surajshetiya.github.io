@@ -31,7 +31,7 @@ We can conclude using the same logic that the below set of triangles are similar
 And hence we can conclude from these similar triangles that this logic holds through out all these triangles.  
 If we started off with equal line segements(CG = GI = IL = LM), then we would end up with equal line segments in the parallel line too i.e. we would end up with (AO = OP = PQ = QB).  
 
-If we were to construct a parallel line to the given and then divide the parallel line into *n* number of line segments and then get the vertex of triangle common to all the triangles, then we can get the location of all the other *n-2* points on the given line. Let us see an illustration how this can be achieved.
+If we were to construct a parallel line to the given line and then divide the parallel line into *n* number of line segments and then get the vertex of triangle common to all the triangles, then we can get the location of all the other *n-2* points on the given line. Let us see an illustration how this can be achieved.
 
 ## Tools required
 
