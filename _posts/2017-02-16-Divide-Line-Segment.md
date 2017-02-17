@@ -66,9 +66,8 @@ Connect the points of the perpendicular bisector I and J and extend the parallel
 
 #### Step 2: Divide the parallel line into *n* equal line segments
 
-Dividing the parallel line to *n* equal segments of **any length**.
-For simplicity I decided to choose the length to be equal to EJ as we already have a circle around E cutting the line at J. If you choose a different length, then we need to draw a different circle around E. It will cut the line EJ at the new point that we need for further constructions.
-![Step 1g]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_1e.png "Step 1g")  
+Dividing the parallel line to *n* equal segments of **any length** would be a key step in this process. We can choose any length to form the *n* equal line segements. For simplicity I decided to choose the length to be equal to EJ, as we already have a circle around E cutting the line at J. If you choose a different length, then you will need to draw a different circle around E which will cut the line EJ at the new point that we need for further constructions.
+![Step 1g]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_1g.png "Step 1g")  
 
 From the new point that you just obtained, measure the length l and draw a circle to obtain another point on the line. Keep repeating this process till you obtain your *n* points. In the diagram below, we obtained the points K, L and M by drawing these circles.
 ![Step 2a]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_2a.png "Step 2a")  
