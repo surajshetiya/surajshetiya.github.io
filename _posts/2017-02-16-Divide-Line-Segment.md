@@ -9,7 +9,7 @@ Let us look at the theory behind how this technique works.
 
 ![Theory]({{site.name}}/images/div_line_seg_theory.png "Theory")  
 
-The diagram above shows two line segments AB and CM, which are parallel to each other. Let us look at triangles NCG and NAO. The line segment NA cuts the parallel lines at C and A respectively. So the angle $$\wedgecap{NCG}$$ is equal to the angle $$\wedgecap{NAO}$$ ( take a look [here](https://en.wikipedia.org/wiki/Parallel_(geometry) for more explanationa). Similarly, looking at line NO we can conclude that $$\wedgecap{NGC}$$ is equal to $$wedgecap{NOA}$$. $$\wedgecap{ANO}$$ and $$\wedgecap{CNG}$$ are the same angle and so are equal. This shows that the two triangles NCG and NAO are similar.  
+The diagram above shows two line segments AB and CM, which are parallel to each other. Let us look at triangles NCG and NAO. The line segment NA cuts the parallel lines at C and A respectively. So the angle $$\widehat{NCG}$$ is equal to the angle $$\widehat{NAO}$$ ( take a look [here](https://en.wikipedia.org/wiki/Parallel_(geometry) for more explanationa). Similarly, looking at line NO we can conclude that $$\widehat{NGC}$$ is equal to $$widehat{NOA}$$. $$\widehat{ANO}$$ and $$\widehat{CNG}$$ are the same angle and so are equal. This shows that the two triangles NCG and NAO are similar.  
 
 Let us make use the rule of equality of ratio of sides in these two similar triangles,  
 $$\frac{CG}{AO}$$ = $$\frac{NG}{NO}$$
