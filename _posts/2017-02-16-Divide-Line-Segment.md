@@ -33,15 +33,15 @@ If we started off with equal line segements(CG = GI = IL = LM), then we would en
 
 If we were to construct a parallel line to the given and then divide the parallel line into *n* number of line segments and then get the vertex of triangle common to all the triangles, then we can get the location of all the other *n-2* points on the given line. Let us see an illustration how this can be achieved.
 
-#### Tools required
+## Tools required
 
 * Scale
 * Compass
 * Pencil
 
-### Steps
+## Steps
 
-#### Step 1 : Draw a parallel line
+### Step 1 : Draw a parallel line
 ![Step 1a]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_1a.png "Step 1a")  
 To draw a parallel line to our given line(shown in picture above), we need to draw a perpendicular line from our given line. Let us first start with 2 equidistant points from point A.
 
@@ -64,7 +64,7 @@ From G and H draw a perpendicular bisector.
 Connect the points of the perpendicular bisector I and J and extend the parallel line ahead.
 ![Step 1g]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_1g.png "Step 1g")  
 
-#### Step 2: Divide the parallel line into *n* equal line segments
+### Step 2: Divide the parallel line into *n* equal line segments
 
 Dividing the parallel line to *n* equal segments of **any length** would be a key step in this process. We can choose any length to form the *n* equal line segements. For simplicity I decided to choose the length to be equal to EJ, as we already have a circle around E cutting the line at J. If you choose a different length, then you will need to draw a different circle around E which will cut the line EJ at the new point that we need for further constructions.
 ![Step 1g]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_1g.png "Step 1g")  
@@ -72,12 +72,12 @@ Dividing the parallel line to *n* equal segments of **any length** would be a ke
 From the new point that you just obtained, measure the length l and draw a circle to obtain another point on the line. Keep repeating this process till you obtain your *n* points. In the diagram below, we obtained the points K, L and M by drawing these circles.
 ![Step 2a]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_2a.png "Step 2a")  
 
-#### Step 3: Form the triangle
+### Step 3: Form the triangle
 
 We now obtain the apex(the vertex N in the theory example) of the triangle by using the points B and M. Connect the points B and M and extend these till it cuts the line AE.
 ![Step 3a]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_3a.png "Step 3a")  
 
-From the apex N draw lines NJ, NK and NL to cut the line AB to obtain O, P and Q.
+From the apex N draw lines through J, K and L to cut the line AB at O, P and Q.
 ![Step 3b]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_3b.png "Step 3b")  
 ![Step 3c]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_3c.png "Step 3c")  
 
