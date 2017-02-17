@@ -7,7 +7,7 @@ This problem is from a competition where we were only allowed to use tools such 
 
 Let us look at the theory behind how this technique works.
 
-![Theory]({{site.name}}/images/div_line_seg_theory.png "Theory")  
+![Theory]({{site.baseurl}}/images/div_line_seg_theory.png "Theory")  
 
 The diagram above shows two line segments AB and CM, which are parallel to each other. Let us look at triangles NCG and NAO. The line segment NA cuts the parallel lines at C and A respectively. So the angle $$\widehat{NCG}$$ is equal to the angle $$\widehat{NAO}$$ ( take a look [here](https://en.wikipedia.org/wiki/Parallel_(geometry) for more explanationa). Similarly, looking at line NO we can conclude that $$\widehat{NGC}$$ is equal to $$widehat{NOA}$$. $$\widehat{ANO}$$ and $$\widehat{CNG}$$ are the same angle and so are equal. This shows that the two triangles NCG and NAO are similar.  
 
