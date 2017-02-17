@@ -114,13 +114,13 @@ x   = 0.5600
 
 
 ``` matlab
-K>> floor(vpa( x - Min + (G/2)) / G)
+K>> floor(vpa(( x - Min + (G/2)) / G))
  
 ans =
  
 3
  
-K>> ( x - Min + (G/2)) / G
+K>> vpa(( x - Min + (G/2)) / G)
 
 ans =
 
