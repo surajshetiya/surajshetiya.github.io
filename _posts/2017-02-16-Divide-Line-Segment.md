@@ -87,8 +87,8 @@ A close up of the points A, O, P, Q and B is shown below.
 To check if these points divide the line segment AB equally into 5 segments, we draw circles around O, P and Q with radius as their neighbouring points to verify that the lengths actually do match.
 ![Step 3e]({{site.baseurl}}/images/div_line_segment/div_line_seg_step_3e.png "Step 3e")  
 
-The complete construction below
+The complete construction below  
 ![Final]({{site.baseurl}}/images/div_line_segment/div_line_seg_final.png "Final")  
 
-*Note*: One corner case that has not neen mentioned here is that the lines AE and BM in step 3 may not intersect in one unique case. This is the case when the length of line segment AB is equal to the length of the line segment EM. In this case, we can make use of the lenght of any of the line segments from the parallel line(EJ = JK = KL = LM) to divide the actual line into equal segments.
+*Note*: One corner case that has not neen mentioned here is that the lines AE and BM in step 3 may not intersect in one unique case. This happens when the length of line segment AB is equal to the length of the line segment EM. In this case, we can make use of the lenght of any of the line segments from the parallel line(EJ = JK = KL = LM) to divide the actual line into equal segments.
 
