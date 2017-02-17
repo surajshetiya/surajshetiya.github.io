@@ -103,46 +103,20 @@ ans =
 K>>
 ```
 
-And I tried to use this higher precission of numbers in my code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify.  
-
-Min, Max, num, x
-
-Min = 0.2800  
-Max = 0.6000  
-num = 7  
-x   = 0.5600  
-
-
-``` matlab
-K>> floor(vpa(( x - Min + (G/2)) / G))
- 
-ans =
- 
-3
- 
-K>> vpa(( x - Min + (G/2)) / G)
-
-ans =
-
-    4.0000
-
-K>>
-```
-
-Numerical issues were still present here. And I believe the division present in the equation had to be removed to get the desired result. Hence, I rewrote the code below for mapping to the bucket.
+And I tried to use this higher precission of numbers in my code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify. And it was correct while being pretty slow.
 
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
     if( x < Min - (G/2) )
     	b = 1;
+    % elseif( x >= Max + (G/2))
+    % The above expression does not work when Max = Min in which case the
+    % last bucket would be 0.0001 added from first bucket end point onwards
     elseif( x >= Min + G*(num-3) + (G/2))
     	b = num;
     else
-        values = repmat( Min + G/2, 1, num - 2) + (0:G:(num-3)*G);
-        newmat = (2:num-1) .* (x < values);
-        b = min(newmat(newmat ~= 0));
+    	b = 2 + floor(vpa(( x - Min + (G/2)) / G));
     end
 end
 ```
-
