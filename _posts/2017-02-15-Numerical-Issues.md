@@ -103,7 +103,7 @@ ans =
 K>>
 ```
 
-And I tried to use this higher precission of numbers in ym code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify.  
+And I tried to use this higher precission of numbers in my code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify.  
 
 Min, Max, num, x
 
