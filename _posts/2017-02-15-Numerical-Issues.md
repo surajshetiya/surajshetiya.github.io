@@ -122,14 +122,41 @@ end
 
 To increase the spead of execution and also after taking into consideration that data in reality will only bre repsented by certain decimal precession, I decided to write a different version of the same code but which deals with integers. The equation that we have derived before can be simplified further as below.
 
-For bins 1 to *N*-1 $$ x < Min + (Bin -1)G - \frac{G}{2} $$
-This equation can be further simplified as below.
-Multiplying by 2 we get
+For bins 1 to *N*-1 we have the equation : $$ x < Min + (Bin -1)G - \frac{G}{2} $$  
+This equation can be further simplified as below.  
+Multiplying by 2 we get  
 $$
 2x < 2*Min + 2*(Bin-1)*G - G
+$$  
+$$
 2x < 2*Min + (2*Bin -3)*G
+$$  
+  
+We can substitute the value of G in the above equation.  
 $$
-
-We can substitute the valuf og G in the above equation.
+2*x < 2*Min + (2*Bin -3)*\frac{Max-Min}{Num-3}
+$$  
+  
+Multiplying by Num -3 we obtain  
 $$
-$$
+2*x*(Num-3) < 2*Min*(Num-3) + (2*Bin -3)
+$$  
+  
+If we can run a loop through the bins then the smallest bin satisfying this equation, would be the bin we need.  
+``` matlab
+function [ b ] = mapToBucket( Min, Max, num, x )
+    % To take care of the Max = Min case
+    if( Max == Min && x == Min)
+        b = 2;
+        return;
+    end
+    for b = 1:num-1
+        if(2*x*(num-3) < (2*Min*(num-3)+(2*b-3)*(Max - Min)))
+            return
+        end
+    end
+    b = num;
+end
+```
+  
+The code above does not work directly on the input instead we need to convert the values of Min, Max and x into uint64 by multiplying them with the inverse of the least precission decimal unit.
