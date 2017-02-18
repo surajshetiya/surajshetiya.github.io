@@ -10,9 +10,7 @@ I was tryin to fit a histogram to a set of data points. The bins of the [histogr
 S - Smallest  
 L - Largest  
   
-$$
-G = \frac{L-S}{N-3}
-$$
+$$ G = \frac{L-S}{N-3} $$
 
 * Bin 1, covering interval (-infinity, S-G/2).
 * Bin 2, covering interval [S-G/2, S+G/2).
@@ -33,7 +31,7 @@ So, I could write forumlae for the bin as below,
 
 The above expression can be validated by taking a few end points of the bins.
 
-The code in [MATLAB](https://en.wikipedia.org/wiki/MATLAB) that represents the above mapping is below.
+The code below in [MATLAB](https://en.wikipedia.org/wiki/MATLAB) represents the above mapping.
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
@@ -121,3 +119,17 @@ function [ b ] = mapToBucket( Min, Max, num, x )
     end
 end
 ```
+
+To increase the spead of execution and also after taking into consideration that data in reality will only bre repsented by certain decimal precession, I decided to write a different version of the same code but which deals with integers. The equation that we have derived before can be simplified further as below.
+
+For bins 1 to *N*-1 $$ x < Min + (Bin -1)G - \frac{G}{2} $$
+This equation can be further simplified as below.
+Multiplying by 2 we get
+$$
+2x < 2*Min + 2*(Bin-1)*G - G
+2x < 2*Min + (2*Bin -3)*G
+$$
+
+We can substitute the valuf og G in the above equation.
+$$
+$$
