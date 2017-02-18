@@ -102,8 +102,6 @@ K>>
 ```
 
 And I tried to use this higher precission of numbers in my code. But this time I wanted to make sure I have no bugs lurking in my code. So, I did cross verify. And it was correct while being pretty slow.
-  
-The final version of my code below.
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     G = max(( Max - Min ) / (num-3), 0.0001);
@@ -139,10 +137,12 @@ $$
   
 Multiplying by Num -3 we obtain  
 $$
-2*x*(Num-3) < 2*Min*(Num-3) + (2*Bin -3)
+2*x*(Num-3) < 2*Min*(Num-3) + (2*Bin -3)*(Max-Min)
 $$  
   
 If we can run a loop through the bins then the smallest bin satisfying this equation, would be the bin we need.  
+  
+The final version of my code below.
 ``` matlab
 function [ b ] = mapToBucket( Min, Max, num, x )
     % To take care of the Max = Min case
@@ -159,4 +159,4 @@ function [ b ] = mapToBucket( Min, Max, num, x )
 end
 ```
   
-The code above does not work directly on the input instead we need to convert the values of Min, Max and x into uint64 by multiplying them with the inverse of the least precission decimal unit.
+The code above does not work directly on the fractional input. We need to convert the values of Min, Max and x into uint64 by multiplying them with the inverse of the least significant decimal unit(for eg, in Min was 0.41, Max was 0.833 and x was 0.59 then we would divide them by 0.001 making them Min - 441, Max - 833 and x - 590) . Dealing with integers reduces the uncertainty involved with the numbers as they are precise while being smaller in range. A uint64 was large enough for my data I was dealing, you will need to make the choice based on the data you are dealing with.
