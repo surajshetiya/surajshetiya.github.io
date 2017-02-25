@@ -69,5 +69,3 @@ function [ op ] = max_delete_num(y)
     end
 end
 ```
-
-Sayonara.
