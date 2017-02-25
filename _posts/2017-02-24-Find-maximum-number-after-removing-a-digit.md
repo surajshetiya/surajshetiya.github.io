@@ -34,10 +34,10 @@ Note that for the rest of the article when I say smaller or larger then I mean i
 The first step in solving this question is identifying adjacent repetitions of digits which are followed by a larger number. And then what ? If we have multiple such numbers then which one should we delete ?
 
 
-Let us take an example and find out. n = 113224, then the two numbers are 13224 and 11324, note that the first number is larger than the second and hence we know that deleting the first occurence is the correct choice. But why ? Intutively speaking, as we have choice of digits that we can delete, we should choose the one which has highest significance. That is the first occurance. Is this all to the problem ?
+Let us take an example and find out. n = 113224, then the two numbers are 13224 and 11324, note that the first number is larger than the second and hence we know that deleting the first occurence is the correct choice. But why ? Intuitively speaking, as we have choice of digits that we can delete, we should choose the one which has highest significance. That is the first occurance. Is this all to the problem ?
 
 
-We seem to have missed another case, what if we dont find an increasing sequence at all, for example n=110443762, then what should be correct answer ? We have already seen that deleting a digit that is followed by a smaller number makes the number smaller than the rest. But we know that all possible deletions that can happen would make the resulting number smaller. So which one to choose ? Intutively, we should be deleting the one with the least significant bit i.e. last occurence. This follows the exact same logic to why the first number should be chosen when it is increasing instead of the rest.
+We seem to have missed another case, what if we dont find an increasing sequence at all, for example n=110443762, then what should be correct answer ? We have already seen that deleting a digit that is followed by a smaller number makes the number smaller than the rest. But we know that all possible deletions that can happen would make the resulting number smaller. So which one to choose ? Intuitively, we should be deleting the one with the least significant bit i.e. last occurence. This follows the exact same logic to why the first number should be chosen when it is increasing instead of the rest.
 
 
 Code for the same in matlab is as below.
@@ -46,19 +46,25 @@ Code for the same in matlab is as below.
 ```matlab
 function [ op ] = max_delete_num(y)
     assert(all(y>='0') && all(y<='9'), 'Numbers should be between 0 and 9');
+
     % Find out the locations of the repetition.
     repeats = [y,'a']==['a',y];
+
     assert(any(repeats), 'Should have atleast 1 repeating number');
+
     % Get the index of the location where it is increasing.
     index = arrayfun(@(x) x*(y(x)<y(x+1)), find(repeats(1:end-2)));
+
     % If there any such locations then form new number and return it.
     if(any(index))
         i = find(index);
         op = [y(1:index(i(1))-1), y(index(i(1))+1:end)];
     else
-        % Find indexes of the repeats and then delete the last occurence.
+        % Find indexes of the repeats.
         repeat = find(repeats);
         last_repeat = repeat(end);
+
+        % Delete the last occurence from the number.
         op = [y(1:last_repeat-1), y(last_repeat+1:end)];
     end
 end
