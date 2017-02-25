@@ -45,15 +45,15 @@ Code for the same in matlab is as below.
 
 ```matlab
 function [ op ] = max_delete_num(y)
-    assert(all(y>='0') && all(y<='9'), 'Numbers should be between 0 and 9');
+    assert(all(y>='0') && all(y<='9'), 'Numbers should be between 0 and 9');\\
 
     % Find out the locations of the repetition.
-    repeats = [y,'a']==['a',y];
+    repeats = [y,'a']==['a',y];\\
 
-    assert(any(repeats), 'Should have atleast 1 repeating number');
+    assert(any(repeats), 'Should have atleast 1 repeating number');\\
 
     % Get the index of the location where it is increasing.
-    index = arrayfun(@(x) x*(y(x)<y(x+1)), find(repeats(1:end-2)));
+    index = arrayfun(@(x) x*(y(x)<y(x+1)), find(repeats(1:end-2)));\\
 
     % If there any such locations then form new number and return it.
     if(any(index))
