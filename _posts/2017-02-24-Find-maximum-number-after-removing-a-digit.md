@@ -62,7 +62,7 @@ function [ op ] = max_delete_num(y)
     else
         % Find indexes of the repeats.
         repeat = find(repeats);
-        last_repeat = repeat(end);\\
+        last_repeat = repeat(end);
 
         % Delete the last occurence from the number.
         op = [y(1:last_repeat-1), y(last_repeat+1:end)];
