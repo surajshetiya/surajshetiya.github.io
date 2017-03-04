@@ -13,7 +13,8 @@ The glossary for the terms below are as below.
 
 * O - Observation
 * $$\pi_{i}$$ - Probability of being in state *i* at time 0
-* b_{i}(O_{t}) - Probability of observing the *t*<sup>th</sup> observation from state i
+* $$b_{i}(O_{t})$$ - Probability of observing the *t*<sup>th</sup> observation from state i
+* $$\alpha(i) = P(O_{1}, O_{2}, ... , O_{t}, q_{t} = S_{i}|\lamda)$$
 
 
 The *alpha*s can be calculated by using the formulae below.
@@ -30,5 +31,5 @@ For $$\alpha$$ values at other observations we get the recursive formula below.
 
 
 $$
-\alpha_{t+1}(j) = b_{j}(O_{t+1})\sum_{j=1}^{\N}
+\alpha_{t+1}(j) = b_{j}(O_{t+1})\sum_{j=1}^{N}
 $$
