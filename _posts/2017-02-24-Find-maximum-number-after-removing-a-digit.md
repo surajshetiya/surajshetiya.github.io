@@ -5,14 +5,14 @@ title: Finding the maximum number after removing a digit from it
 
 This was one of the interview questions at Google back in 2016.
 
-#### The problem statement
+### The problem statement
 
 Given a number n which has atleast one occurence of a digit repeating itself adacently, find the maximum number that can be obtained by deleting ONE of these adjacent digits.
 
 
 Let us a take an example to understand the question better. Let us say n is 12**33**2, note that 3 repeats adjacently and can be deleted while even though 2 repeats itself in the number it cannot be deleted because the two 2s are not adjacent. So, there is only one number in this case which is 1232 and that itself is the maximum. Let us consider another example, n = 1122, then there are two different numbers that can have one valid digit removed 122 and 112. And as we see that 122 > 112 the output should be 122.
 
-#### Approach
+### Approach
 
 Let us consider the case where the number has *r* repetitions, then we would have to compute r numbers and then find the maximum ?
 
