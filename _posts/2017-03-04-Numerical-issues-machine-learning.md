@@ -117,6 +117,7 @@ $$
 A + B = e^{z}(e^{x-z} + e^{y-z})
 
 
+
 log(A + B) = z + log(e^{x-z} + e^{y-z})
 $$
 
