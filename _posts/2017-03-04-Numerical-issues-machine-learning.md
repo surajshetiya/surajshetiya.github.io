@@ -74,6 +74,13 @@ The best way to make sure it is correctly represented is by taking a logarithm o
 $$log(A*B) = log(A) + log(B) $$
 
 
+A similar logic for division follows.
+
+
+
+$$log(\frac{A}{B}) = log(A) - log(B) $$
+
+
 Hence, by this logic we can take logs on the individual terms and sum them up and yet correctly represent the actual number(we will see that we would normalise later which can be represented in double format).
 
 
@@ -81,17 +88,38 @@ Hence, by this logic we can take logs on the individual terms and sum them up an
 Let us now look at sum of A and B and see if we can use some similar logic in order to solve the same numerical issues.
 
 
-$$A + B = X(\frac{A}{X} + \frac{B}{X} $$
+$$A + B = X(\frac{A}{X} + \frac{B}{X})$$
 
 
 By making use of the equation above if we can make sure that the fractions A/X and B/X can be represented in double then we can compute the value of A + B and store it in logarithmic form. LEt us look at the math below.
 
 
 $$x = log(A)
+
+
 y = log(B)
 $$
 
 
 We need to compute A + B.
 
-$$A + B = e^{x} + e^{y}$$
+$$A + B = e^{x} + e^{y}
+
+
+A + B = e^{z}(e^{x-z} + e^{y-z})
+$$
+
+
+Now, we are down to choosing a suitable z such that $$e^{x-z}$$ and $$e^{y-z}$$ can be best represented as double. We know that the [format of double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) can represent numbers from $$e^{-1022}$$ upto $$e^{1023}$$. As this range is almost evenly divided between the positive and negative sides, we can choose z that divides the set of numbers(in this case *x* and *y*) into two equal halfes i.e. (max+min)/2. In other words choose the Midrange value as z. Then compute $$e^{z}(e^{x-z} + e^{y-z})$$ as it will now be within range and then use the log of sum rule above to get the new value.
+
+
+$$
+A + B = e^{z}(e^{x-z} + e^{y-z})
+
+
+log(A + B) = z + log(e^{x-z} + e^{y-z})
+$$
+
+
+And hence, we know the solution for the sum case. A similar argument for the difference case would yield us values within the range of double and we can obtain the log of differences too. 
+
