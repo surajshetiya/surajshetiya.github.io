@@ -14,7 +14,7 @@ The glossary for the terms below are as below.
 * O - Observation
 * $$\pi_{i}$$ - Probability of being in state *i* at time 0
 * $$b_{i}(O_{t})$$ - Probability of observing the *t*<sup>th</sup> observation from state i
-* $$\alpha(i) = P(O_{1}, O_{2}, ... , O_{t}, q_{t} = S_{i}|\lambda) $$ - Probability of having observed O~1~ $$ to O~t~ and being in state *i* at time t.
+* $$\alpha(i) = P(O_{1}, O_{2}, ... , O_{t}, q_{t} = S_{i} \| \lambda) $$ - Probability of having observed O~1~ to O~t~ and being in state *i* at time t.
 
 In the [forward algorithm](https://en.wikipedia.org/wiki/Forward_algorithm) we need to calculate $$\alpha$$ for each step. The $$\alpha$$s can be calculated by using the formulae below.
 
