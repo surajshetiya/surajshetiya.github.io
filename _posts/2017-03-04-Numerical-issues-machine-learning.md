@@ -62,7 +62,7 @@ Code in python is as below
 ```
 
 
-The calculation for $$\alpha$$ has products of previous $$\alpha$$s. Over time we know that this value would become 0 i.e. 0 by the double value. But in order to avoid this situation we need to change the before mentioned logic. Let us look at another approach of doing this.
+The calculation for $$\alpha$$ has products of previous $$\alpha$$s. Over time we know that this value would become 0 i.e. 0 in the double format while not being 0 mathematically. To understand this, let us say we were raising 0.1 to the power to index every time, then for the 18,000<sup>th</sup> entry it would be 0.1<sup>18000</sup> which is 0 in double format. But in order to avoid this situation we need to change the before mentioned logic. Let us look at another approach of doing this.
 
 
 Let us say we had to compute a product of *A* and *B* which overflows the double or underflows the double. Then how do I represent this in some other format ?
