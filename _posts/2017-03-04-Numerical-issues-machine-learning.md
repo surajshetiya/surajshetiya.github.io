@@ -91,12 +91,14 @@ Let us now look at sum of A and B and see if we can use some similar logic in or
 $$A + B = X(\frac{A}{X} + \frac{B}{X})$$
 
 
-By making use of the equation above if we can make sure that the fractions A/X and B/X can be represented in double then we can compute the value of A + B and store it in logarithmic form. LEt us look at the math below.
+By making use of the equation above if we can make sure that the fractions A/X and B/X can be represented in double then we can compute the value of A + B and store it in logarithmic form. Let us look at the math below.
 
 
 $$x = log(A)
+$$
 
 
+$$
 y = log(B)
 $$
 
@@ -112,7 +114,7 @@ A + B = e^{z}(e^{x-z} + e^{y-z})
 $$
 
 
-Now, we are down to choosing a suitable z such that $$e^{x-z}$$ and $$e^{y-z}$$ can be best represented as double. We know that the [format of double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) can represent numbers from $$e^{-1022}$$ upto $$e^{1023}$$. As this range is almost evenly divided between the positive and negative sides, we can choose z that divides the set of numbers(in this case *x* and *y*) into two equal halfes i.e. (max+min)/2. In other words choose the Midrange value as z. Then compute $$e^{z}(e^{x-z} + e^{y-z})$$ as it will now be within range and then use the log of sum rule above to get the new value.
+Now, we are down to choosing a suitable z such that $$e^{x-z}$$ and $$e^{y-z}$$ can be best represented as double. We know that the [format of double](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) can represent numbers from $$e^{-1022}$$ upto $$e^{1023}$$. As this range is almost evenly divided between the positive and negative sides, we can choose z that divides the set of numbers(in this case *x* and *y*) into two equal halves i.e. (max+min)/2. In other words choose the Midrange value as z. Then compute $$e^{z}(e^{x-z} + e^{y-z})$$ as it will now be within range and then use the log of sum rule above to get the new value.
 
 
 $$
