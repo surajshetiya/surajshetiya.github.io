@@ -104,8 +104,10 @@ $$
 We need to compute A + B.
 
 $$A + B = e^{x} + e^{y}
+$$
 
 
+$$
 A + B = e^{z}(e^{x-z} + e^{y-z})
 $$
 
