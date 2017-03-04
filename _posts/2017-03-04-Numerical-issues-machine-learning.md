@@ -6,7 +6,7 @@ title: Numerical issues in Machine learning
 This is another one of the numerical issues posts which changed the final result while being mathematically correct.
 
 
-My friend was working on the [Hidden Markov Model](https://en.wikipedia.org/wiki/Hidden_Markov_model) problem where he had found a working code from the github repository.
+My friend was working on the [Hidden Markov Model](https://en.wikipedia.org/wiki/Hidden_Markov_model) problem where he had found a working code from the github repository. While it worked for the sample case of 1000 observations it did not serve the purpose for a larger data set. My friend had a testset which had 18,000 observations and that is when this numerical issue was uncovered. The issue we faced and the way we overcame it is the topic of this blog post.
 
 
 The glossary for the terms below are as below.
