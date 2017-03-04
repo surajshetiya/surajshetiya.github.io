@@ -31,7 +31,7 @@ Note that for the rest of the article when I say smaller or larger then I mean i
 
 
 
-The first step in solving this question is identifying adjacent repetitions of digits which are followed by a larger number. And then what ? If we have multiple such numbers then which one should we delete ?
+The first step in solving this question is identifying adjacent repetitions of digits which are followed by a larger number. If we have multiple such numbers then which one should we delete ?
 
 
 Let us take an example and find out. n = 113224, then the two numbers are 13224 and 11324, note that the first number is larger than the second and hence we know that deleting the first occurence is the correct choice. But why ? Intuitively speaking, as we have choice of digits that we can delete, we should choose the one which has highest significance. That is the first occurance. Is this all to the problem ?
