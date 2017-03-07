@@ -69,3 +69,28 @@ function [ op ] = max_delete_num(y)
     end
 end
 ```
+
+
+Another interview question from Google, on similar lines is as below.
+
+
+Given a number n which has atleast 2 digits, find the maximum number that can be obtained by replacing any 2 consecutive digits by the mean of their digits(if the mean is not a integer then use the next larger integer).
+
+
+For example, if n = 945114 then there are numerous possibilies namely, 75114, 95114, 94514, 94513 and by taking a look at these numbers the largest is obvious which is 95114. This follows a similar logic as mentioned before. Code in MATLAB is as below.
+
+
+
+```matlab
+function [ op ] = max_delete_num(y)
+    assert(all(y>='0') && all(y<='9') , 'Numbers should be between 0 and 9');
+    assert(length(y) > 1, 'Should atleast be 2 numbers');
+    index = arrayfun(@(x) x*(y(x)<y(x+1)), 1:length(y)-1);
+    if(any(index))
+        i = find(index);
+        op = [y(1:index(i(1))-1), ceil((y(index(i(1))) + y(index(i(1))+1))/2) +y(index(i(1))+2:end)];
+    else
+        op = [y(1:end-2), ceil((y(end)+y(end-1))/2)];
+    end
+end
+```
