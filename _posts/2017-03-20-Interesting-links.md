@@ -7,10 +7,10 @@ This web page contains interesting information regarding a number of topics. Als
 
 # Table of conetents
 1. [Aquaponics](#Aquaponics)
-  1. [Compost tea with aquaponics](#Compost_tea_aquaponics)
-  2. [Goldfish or Koi](#Goldfish_Koi)
-    1. [Food for Goldfish](#Food_for_goldfish)
-    2. [Goldfish vegetables](#Goldfish_veggies)
+	1. [Compost tea with aquaponics](#Compost_tea_aquaponics)
+	2. [Goldfish or Koi](#Goldfish_Koi)
+		1. [Food for Goldfish](#Food_for_goldfish)
+		2. [Goldfish vegetables](#Goldfish_veggies)
 
 # Aquaponics <a name="Aquaponics" />
 ## Compost tea with aquaponics <a name="Compost_tea_aquaponics" />
