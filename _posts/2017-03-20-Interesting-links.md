@@ -14,6 +14,10 @@ This web page contains interesting information regarding a number of topics. Als
 		2. [Goldfish vegetables](#Goldfish_veggies)
 2. [Functional Programming](#FP)
 	1. [SICP - Structure and interpretation of computer programs](#SICP)
+3. [Competitive Programming](#CP)
+	1. [USACO training](#USACO)
+	2. [Google Code Jam](#Code_jam)
+	3. [Al Zimmermann's Programming contests](#AlZimmermann)
 
 # Aquaponics <a name="Aquaponics" />
 ## Good fish suitable for aquaponics <a name="Good_fish_aquaponics" />
@@ -58,6 +62,15 @@ Other notable homemade plants
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AVogwEYXGLo" frameborder="0" allowfullscreen></iframe>
 Remember to cook and chop all hard vegetables
 
-# Functional programming <a name="fp" />
-# SICP - Structure and interpretation of computer programs<a name="sicp" />
+# Functional programming <a name="FP" />
+## SICP - Structure and interpretation of computer programs<a name="SICP" />
 [Link to the free text](https://mitpress.mit.edu/sicp/) - Thanks to Authors of the text for having registering the text in Creative Commons License.
+
+# Competitive Programming <a name="CP"/>
+## USACO <a name="USACO" />
+A very nice website that teaches you how to code. Link [here](http://www.usaco.org/).
+## Google Code Jam <a name="Code_jam"/>
+Old problems from the google code jam are a good place to [start](https://code.google.com/codejam/).
+## Al Zimmermann's Programming contests <a name="AlZimmermann"/>
+A little hard problems. Takes more time but then the solution also needs to be cleaner and so more effort and better clarity on problems.  
+Link [here](http://azspcs.com).
