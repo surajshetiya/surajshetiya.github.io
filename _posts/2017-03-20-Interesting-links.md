@@ -12,6 +12,8 @@ This web page contains interesting information regarding a number of topics. Als
 	3. [Goldfish or Koi](#Goldfish_Koi)
 		1. [Food for Goldfish](#Food_for_goldfish)
 		2. [Goldfish vegetables](#Goldfish_veggies)
+2. [Functional Programming](#FP)
+	1. [SICP - Structure and interpretation of computer programs](#SICP)
 
 # Aquaponics <a name="Aquaponics" />
 ## Good fish suitable for aquaponics <a name="Good_fish_aquaponics" />
@@ -56,3 +58,6 @@ Other notable homemade plants
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AVogwEYXGLo" frameborder="0" allowfullscreen></iframe>
 Remember to cook and chop all hard vegetables
 
+# Functional programming <a name="fp" />
+# SICP - Structure and interpretation of computer programs<a name="sicp" />
+[Link to the free text](https://mitpress.mit.edu/sicp/) - Thanks to Authors of the text for having registering the text in Creative Commons License.
