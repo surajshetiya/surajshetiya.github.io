@@ -5,7 +5,7 @@ title: Interesting links
 
 This web page contains interesting information regarding a number of topics. Also, I would keep this page updated for interesting links.
 
-# Table of conetents
+# Table of contents
 1. [Aquaponics](#Aquaponics)
 	1. [Good fish for aquaponics](#Good_fish_aquaponics)
 	2. [Compost tea with aquaponics](#Compost_tea_aquaponics)
@@ -18,6 +18,8 @@ This web page contains interesting information regarding a number of topics. Als
 	1. [USACO training](#USACO)
 	2. [Google Code Jam](#Code_jam)
 	3. [Al Zimmermann's Programming contests](#AlZimmermann)
+4. [Theoretical physics](#TP)
+	1. [How to become a GOOD Theoretical Physicist](#TP1)
 
 # Aquaponics <a name="Aquaponics" />
 ## Good fish suitable for aquaponics <a name="Good_fish_aquaponics" />
@@ -74,3 +76,7 @@ Old problems from the google code jam are a good place to [start](https://code.g
 ## Al Zimmermann's Programming contests <a name="AlZimmermann"/>
 A little hard problems. Takes more time but then the solution also needs to be cleaner and so more effort and better clarity on problems.  
 Link [here](http://azspcs.com).
+
+# Theoretical physics <a name="TP"/>
+## How to become a GOOD Theoretical Physicist <a name="TP1" />
+Link [here](http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html).
