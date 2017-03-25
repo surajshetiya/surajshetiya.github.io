@@ -74,7 +74,7 @@ Remember to cook and chop all hard vegetables
 # Functional programming <a name="FP" />
 ## SICP - Structure and interpretation of computer programs<a name="SICP" />
 [Link to the free text](https://mitpress.mit.edu/sicp/) - Thanks to Authors of the text for having registering the text in Creative Commons License.  
-Link to a interesting set of Prolog problems [here](https://sites.google.com/site/prologsite/prolog-problems).
+Set of 99 problems in different languages: [Prolog](https://sites.google.com/site/prologsite/prolog-problems) [Lisp](http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html) [Haskell](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems) [Scheme](http://community.schemewiki.org/?ninety-nine-scheme-problems) [OCaml](https://github.com/christiankissig/ocaml99/wiki)  
 
 # Competitive Programming <a name="CP"/>
 ## USACO <a name="USACO" />
@@ -98,6 +98,9 @@ Link [here](https://www.kaggle.com/).
 ## Bioinformatics - Programming <a name="BioCP" />
 ### ROSALIND <a name="ROSALIND"/>
 Link [here](http://rosalind.info/).
+
+## Programming languages <a name="ProgLang"/>
+[Exercism](http://exercism.io/)
 
 # Theoretical physics <a name="TP"/>
 ## How to become a GOOD Theoretical Physicist <a name="TP1" />
