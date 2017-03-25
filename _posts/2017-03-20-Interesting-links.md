@@ -19,9 +19,11 @@ This web page contains interesting information regarding a number of topics. Als
 	2. [Google Code Jam](#Code_jam)
 	3. [Al Zimmermann's Programming contests](#AlZimmermann)
 	4. [UVa Online Judge](#UVA)
-	5. [Machine Learning - Competitive Programming](#MLCP)
+	5. [Maths](#MathsCP)
+		1. [Project Euler](#ProjectEuler)
+	6. [Machine Learning - Competitive Programming](#MLCP)
 		1. [Kaggle](#Kaggle)
-	6. [Bioinformatics - programming](#BioCP)
+	7. [Bioinformatics - programming](#BioCP)
 		1. [ROSALIND](#ROSALIND)
 4. [Theoretical physics](#TP)
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
@@ -71,7 +73,8 @@ Remember to cook and chop all hard vegetables
 
 # Functional programming <a name="FP" />
 ## SICP - Structure and interpretation of computer programs<a name="SICP" />
-[Link to the free text](https://mitpress.mit.edu/sicp/) - Thanks to Authors of the text for having registering the text in Creative Commons License.
+[Link to the free text](https://mitpress.mit.edu/sicp/) - Thanks to Authors of the text for having registering the text in Creative Commons License.  
+Link to a interesting set of Prolog problems [here](https://sites.google.com/site/prologsite/prolog-problems).
 
 # Competitive Programming <a name="CP"/>
 ## USACO <a name="USACO" />
@@ -84,13 +87,17 @@ Link [here](http://azspcs.com).
 ## UVa Online judge <a name="UVA" />
 Link [here](https://uva.onlinejudge.org/).
 
+# Maths <a name="MathsCP"/>
+## Project Euler <a name="ProjectEuler"/>
+Link [here](https://projecteuler.net).
+
 ## Machine Learning - Competitive Programming <a name="MLCP"/>
 ### Kaggle <a name="Kaggle" />
 Link [here](https://www.kaggle.com/).
 
 ## Bioinformatics - Programming <a name="BioCP" />
 ### ROSALIND <a name="ROSALIND"/>
-Link [here](http://rosalind.info/)
+Link [here](http://rosalind.info/).
 
 # Theoretical physics <a name="TP"/>
 ## How to become a GOOD Theoretical Physicist <a name="TP1" />
