@@ -18,6 +18,11 @@ This web page contains interesting information regarding a number of topics. Als
 	1. [USACO training](#USACO)
 	2. [Google Code Jam](#Code_jam)
 	3. [Al Zimmermann's Programming contests](#AlZimmermann)
+	4. [UVa Online Judge](#UVA)
+	5. [Machine Learning - Competitive Programming](#MLCP)
+		1. [Kaggle](#Kaggle)
+	6. [Bioinformatics - programming](#BioCP)
+		1. [ROSALIND](#ROSALIND)
 4. [Theoretical physics](#TP)
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
 
@@ -70,12 +75,22 @@ Remember to cook and chop all hard vegetables
 
 # Competitive Programming <a name="CP"/>
 ## USACO <a name="USACO" />
-A very nice website that teaches you how to code. Link [here](http://www.usaco.org/).
+A very nice website that teaches you how to code and prepares you for a Computing Olypiad. Link [here](http://www.usaco.org/).
 ## Google Code Jam <a name="Code_jam"/>
 Old problems from the google code jam are a good place to [start](https://code.google.com/codejam/).
 ## Al Zimmermann's Programming contests <a name="AlZimmermann"/>
 A little hard problems. Takes more time but then the solution also needs to be cleaner and so more effort and better clarity on problems.  
 Link [here](http://azspcs.com).
+## UVa Online judge <a name="UVA" />
+Link [here](https://uva.onlinejudge.org/).
+
+## Machine Learning - Competitive Programming <a name="MLCP"/>
+### Kaggle <a name="Kaggle" />
+Link [here](https://www.kaggle.com/).
+
+## Bioinformatics - Programming <a name="BioCP" />
+### ROSALIND <a name="ROSALIND"/>
+Link [here](http://rosalind.info/)
 
 # Theoretical physics <a name="TP"/>
 ## How to become a GOOD Theoretical Physicist <a name="TP1" />
