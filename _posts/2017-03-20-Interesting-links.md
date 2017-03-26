@@ -27,6 +27,8 @@ This web page contains interesting information regarding a number of topics. Als
 		1. [ROSALIND](#ROSALIND)
 4. [Theoretical physics](#TP)
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
+5. [General Computer Science](#GCS)
+	1. [Design Patterns](#DesignPatterns)
 
 # Aquaponics <a name="Aquaponics" />
 ## Good fish suitable for aquaponics <a name="Good_fish_aquaponics" />
@@ -87,8 +89,8 @@ Link [here](http://azspcs.com).
 ## UVa Online judge <a name="UVA" />
 Link [here](https://uva.onlinejudge.org/).
 
-# Maths <a name="MathsCP"/>
-## Project Euler <a name="ProjectEuler"/>
+## Maths <a name="MathsCP"/>
+### Project Euler <a name="ProjectEuler"/>
 Link [here](https://projecteuler.net).
 
 ## Machine Learning - Competitive Programming <a name="MLCP"/>
@@ -105,3 +107,11 @@ Link [here](http://rosalind.info/).
 # Theoretical physics <a name="TP"/>
 ## How to become a GOOD Theoretical Physicist <a name="TP1" />
 Link [here](http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html).
+
+# Documentaries <a name="Documentaries" />
+## Farmed Norwegian Salmon - World’s Most Toxic Food <a name="NorwegianSalmon" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jH6wH1dqbwc" frameborder="0" allowfullscreen></iframe>
+
+# General Computer Science <a name="GCS">
+## Design patterns <a name="DesignPatterns" />
+A very good basic book on design patterns is at the [wikibooks](https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns)
