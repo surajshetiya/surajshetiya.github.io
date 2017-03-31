@@ -55,7 +55,7 @@ By adding this to the original formula, we obtain 5 Ls removed thrice from the f
 
 And hence, the final formula is as below.
   
-$$ \frac{(l+o)!}{l!o!} - \frac{(o+l-2)!}{(l-3)!o!} + $\frac{(o+l-3)!}{(l-4)!o!}$$  
+$$ \frac{(l+o)!}{l!o!} - \frac{(o+l-2)!}{(l-3)!o!} + \frac{(o+l-3)!}{(l-4)!o!}$$  
   
 Let us verify the above formula with a simple example.
 Let us assume that the student came late to class 4 times and was on time once. 4 Ls and 1 P. The only case when this can be *true* is LLPLL.  
