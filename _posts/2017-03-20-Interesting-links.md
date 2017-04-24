@@ -31,6 +31,7 @@ This web page contains interesting information regarding a number of topics. Als
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
 5. [General Computer Science](#GCS)
 	1. [Design Patterns](#DesignPatterns)
+        2. [C++](#CPP)
 
 # Agriculture <a name="Agriculture" />
 ## Aquaponics <a name="Aquaponics" />
@@ -128,3 +129,11 @@ Link [here](http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html).
 # General Computer Science <a name="GCS">
 ## Design patterns <a name="DesignPatterns" />
 A very good basic book on design patterns is at the [wikibooks](https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns)
+
+## C++ <a name="CPP" />
+1. [Stephan T. Lavalej - Core C++](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Core-C-/Stephan-T-Lavavej-Core-C-1-of-n)  
+2. [Stephan T. Lavalej - STL](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Standard-Template-Library-STL-/C9-Lectures-Introduction-to-STL-with-Stephan-T-Lavavej)  
+3. [Stephen T. Lavalej - Advanced STL](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Advanced-STL/C9-Lectures-Stephan-T-Lavavej-Advanced-STL-1-of-n)  
+4. Bartosz Melwski - C++11 and concurrency  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1835A90FC78FF8BE" frameborder="0" allowfullscreen></iframe>
+
