@@ -135,7 +135,7 @@ A very good basic book on design patterns is at the [wikibooks](https://en.wikib
 2. [Stephan T. Lavalej - STL](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Standard-Template-Library-STL-/C9-Lectures-Introduction-to-STL-with-Stephan-T-Lavavej)  
 3. [Stephen T. Lavalej - Advanced STL](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Advanced-STL/C9-Lectures-Stephan-T-Lavavej-Advanced-STL-1-of-n)  
 4. Bartosz Melwski - C++11 and concurrency  
-His [blog](https://bartoszmilewski.com/) seems to have a lot of information regarding a lot of problems.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1835A90FC78FF8BE" frameborder="0" allowfullscreen></iframe>
+His [blog](https://bartoszmilewski.com/) seems to have a lot of information regarding a lot of problems.  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1835A90FC78FF8BE" frameborder="0" allowfullscreen></iframe>  
 5. [Herb Sutter - C++11 memory model](https://channel9.msdn.com/Shows/Going+Deep/Cpp-and-Beyond-2012-Herb-Sutter-atomic-Weapons-1-of-2#comments)  
 6. [Herb Sutter - Concurrency and parallelism](https://channel9.msdn.com/Shows/Going+Deep/C-and-Beyond-2012-Herb-Sutter-Concurrency-and-Parallelism)
