@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fixing time windows , linux dual boot
+title: Fixing time across windows and linux dual boot
 ---
 
 I ocasionaly use both Windows and Linux in my machine. The end up is that every time I login to Windows and switch back to Linux or vice versa the system time seems to off.  
