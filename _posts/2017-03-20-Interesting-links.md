@@ -21,11 +21,12 @@ This web page contains interesting information regarding a number of topics. Als
 	2. [Google Code Jam](#Code_jam)
 	3. [Al Zimmermann's Programming contests](#AlZimmermann)
 	4. [UVa Online Judge](#UVA)
-	5. [Maths](#MathsCP)
+        5. [ICPC](#ICPC)
+	6. [Maths](#MathsCP)
 		1. [Project Euler](#ProjectEuler)
-	6. [Machine Learning - Competitive Programming](#MLCP)
+	7. [Machine Learning - Competitive Programming](#MLCP)
 		1. [Kaggle](#Kaggle)
-	7. [Bioinformatics - programming](#BioCP)
+	8. [Bioinformatics - programming](#BioCP)
 		1. [ROSALIND](#ROSALIND)
 4. [Theoretical physics](#TP)
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
@@ -102,6 +103,8 @@ A little hard problems. Takes more time but then the solution also needs to be c
 Link [here](http://azspcs.com).
 ## UVa Online judge <a name="UVA" />
 Link [here](https://uva.onlinejudge.org/).
+##ICPC arhcives <a name="ICPC"/>
+This is the link ao ICPC archives. Will be very good problems and very interesting ones too. Link [here](https://icpcarchive.ecs.baylor.edu/)
 
 ## Maths <a name="MathsCP"/>
 ### Project Euler <a name="ProjectEuler"/>
