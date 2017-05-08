@@ -103,7 +103,7 @@ A little hard problems. Takes more time but then the solution also needs to be c
 Link [here](http://azspcs.com).
 ## UVa Online judge <a name="UVA" />
 Link [here](https://uva.onlinejudge.org/).
-##ICPC arhcives <a name="ICPC"/>
+## ICPC arhives <a name="ICPC"/>
 This is the link ao ICPC archives. Will be very good problems and very interesting ones too. Link [here](https://icpcarchive.ecs.baylor.edu/)
 
 ## Maths <a name="MathsCP"/>
