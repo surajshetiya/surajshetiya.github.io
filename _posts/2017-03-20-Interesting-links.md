@@ -21,7 +21,7 @@ This web page contains interesting information regarding a number of topics. Als
 	2. [Google Code Jam](#Code_jam)
 	3. [Al Zimmermann's Programming contests](#AlZimmermann)
 	4. [UVa Online Judge](#UVA)
-        5. [ICPC](#ICPC)
+	5. [ICPC](#ICPC)
 	6. [Maths](#MathsCP)
 		1. [Project Euler](#ProjectEuler)
 	7. [Machine Learning - Competitive Programming](#MLCP)
