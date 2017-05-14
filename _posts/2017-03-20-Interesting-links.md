@@ -104,7 +104,7 @@ Link [here](http://azspcs.com).
 ## UVa Online judge <a name="UVA" />
 Link [here](https://uva.onlinejudge.org/).
 ## ICPC arhives <a name="ICPC"/>
-This is the link ao ICPC archives. Will be very good problems and very interesting ones too. Link [here](https://icpcarchive.ecs.baylor.edu/)
+It is a set of very good problems and very interesting ones too. Link [here](https://icpcarchive.ecs.baylor.edu/)
 
 ## Maths <a name="MathsCP"/>
 ### Project Euler <a name="ProjectEuler"/>
@@ -139,6 +139,6 @@ A very good basic book on design patterns is at the [wikibooks](https://en.wikib
 3. [Stephen T. Lavalej - Advanced STL](https://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Advanced-STL/C9-Lectures-Stephan-T-Lavavej-Advanced-STL-1-of-n)  
 4. [Herb Sutter - C++11 memory model](https://channel9.msdn.com/Shows/Going+Deep/Cpp-and-Beyond-2012-Herb-Sutter-atomic-Weapons-1-of-2#comments)  
 5. [Herb Sutter - Concurrency and parallelism](https://channel9.msdn.com/Shows/Going+Deep/C-and-Beyond-2012-Herb-Sutter-Concurrency-and-Parallelism)
-6. Bartosz Melwski - C++11 and concurrency  
+6. Bartosz Melewski - C++11 and concurrency  
 His [blog](https://bartoszmilewski.com/) seems to have a lot of information regarding a lot of problems.  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1835A90FC78FF8BE" frameborder="0" allowfullscreen></iframe>  
