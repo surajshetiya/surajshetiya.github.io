@@ -33,6 +33,8 @@ This web page contains interesting information regarding a number of topics. Als
 5. [General Computer Science](#GCS)
 	1. [Design Patterns](#DesignPatterns)
         2. [C++](#CPP)
+6. [Good book reviews or talks](#book_reviews)
+	1. [How to Fail at Almost Everything and Still Win Big](#how_to_fail_at_almost_everything_and_still_win_big)
 
 # Agriculture <a name="Agriculture" />
 ## Aquaponics <a name="Aquaponics" />
@@ -129,7 +131,7 @@ Link [here](http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html).
 ## Farmed Norwegian Salmon - World’s Most Toxic Food <a name="NorwegianSalmon" />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jH6wH1dqbwc" frameborder="0" allowfullscreen></iframe>
 
-# General Computer Science <a name="GCS">
+# General Computer Science <a name="GCS"/>
 ## Design patterns <a name="DesignPatterns" />
 A very good basic book on design patterns is at the [wikibooks](https://en.wikibooks.org/wiki/Computer_Science_Design_Patterns)
 
@@ -142,3 +144,11 @@ A very good basic book on design patterns is at the [wikibooks](https://en.wikib
 6. Bartosz Melewski - C++11 and concurrency  
 His [blog](https://bartoszmilewski.com/) seems to have a lot of information regarding a lot of problems.  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL1835A90FC78FF8BE" frameborder="0" allowfullscreen></iframe>  
+  
+# Good book reviews or talks<a name="book_reviews"/>
+## How to Fail at Almost Everything and Still Win Big <a name="how_to_fail_at_almost_everything_and_still_win_big"/>
+Book review - Brian Johnson
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Wi0R1wmAOM" frameborder="0" allowfullscreen></iframe>  
+  
+Author's(Scott Adams - Creator of the character Dilbert) talk on the book  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uy6-fq8PwNk" frameborder="0" allowfullscreen></iframe>  
