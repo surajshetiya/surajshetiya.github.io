@@ -35,6 +35,8 @@ This web page contains interesting information regarding a number of topics. Als
         2. [C++](#CPP)
 6. [Good book reviews or talks](#book_reviews)
 	1. [How to Fail at Almost Everything and Still Win Big](#how_to_fail_at_almost_everything_and_still_win_big)
+7. [Health and fitness](#health_fitness)
+	1. [Kefir](#kefir)
 
 # Agriculture <a name="Agriculture" />
 ## Aquaponics <a name="Aquaponics" />
@@ -152,3 +154,6 @@ Book review - Brian Johnson
   
 Author's(Scott Adams - Creator of the character Dilbert) talk on the book  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uy6-fq8PwNk" frameborder="0" allowfullscreen></iframe>  
+
+# Health and Fitness<a name="health_fitness"/>  
+## Kefir<a name="kefir"/>  
