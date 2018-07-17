@@ -10,7 +10,7 @@ The foobar challenge consisted of 5 levels. Upon completion of a set number of c
 *NOTE*: The code in this entire blog post is written in python 2.7 as google foobar does not allow for 3.5 yet.  
 
 #### Round 1  
-  
+<br/>
 **Re-ID**  
 ```python
 """
@@ -35,13 +35,13 @@ Inputs:
     (int) n = 3
 Output:
     (string) "71113"
-
 """
 ```  
-  
+<br/>
 **APPROACH**  
+<br/>
 This problem is pretty straight forward. I used a straght forward approach of forming the string of primes until the length required was met. The code to the problem in python below.  
-  
+<br/>
 ```python
 def isPrime(n):
     if n == 2:
@@ -71,15 +71,16 @@ def answer(n):
             dig += 1
     return ret_str[n:n+5]
 ```
-  
-
-
-
-
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
 #### Round 2  
   
 **Lovely Lucky LAMBs**  
+<br/>
 ```python
 """
 Lovely Lucky LAMBs
@@ -116,17 +117,17 @@ Output:
 
 """
 ```  
-  
+<br/>
 **APPROACH**  
-  
+<br/>
 The question is a bit tricky to understand at first. The question is asking a difference between number of Fibonacci numbers's sum <= *total_lambs* and number of powers of 2's sum <= *total_lambs* (with a catch in the rule number 4). Once you get hold of the question, the approach is very straight forward  
   
 * Get the number of Fibonacci numbers that fit in *total_lambs*
 * Get the total number of power's of 2 that fits in *total_lambs*
 * Return the difference
-  
+<br/>
 The code in python language is as below.
-
+<br/>
 ```python
 def answer(total_lambs):
     start = 1
@@ -148,14 +149,16 @@ def answer(total_lambs):
         count_stingy += 1
     return  count_stingy - count_generous
 ```  
-  
+<br/>
 Also, this solution is still not optimized. A further optimization can be done for the Fibonacci series by using the property $$S_n=F_{n+2}−1$$. Finding the nth Fibonacci number can be done in $$O(log(n))$$ time.  
-  
-  
-  
-  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
 **Please Pass the Coded Messages**  
+<br/>
 ```python
 """
 Please Pass the Coded Messages
@@ -179,14 +182,15 @@ Output:
     (int) 94311
 """
 ```  
-  
+<br/>
 **APPROACH**
-  
+<br/>
 Luckily, the question for this problem is straight forward. The intuition behind the solution is that we should as many numbers in the solution as possible. The more the digits the larger it is. Also, the numbers should be sorted in descending order. To get to the core of the solution we need to understand the property for divisibility by 3. A number is divisibly by 3 if sum of the digits of the number is divisible by 3. Hence, if we modulo the digits by 3, it would fall into 3 categories, namely 0, 1 and 2. All the numbers with a reminder of 0 are themselves divisible by 3 and hence, can be directly used in the answer. As per the reminders of 1 and 2, we can either choose a number that has a reminder as 1 and choose another number that has a reminder as 2(rule 1) and add these to the answer list, or we can choose 3 numbers that have a reminder of 1(rule 2) or 3 numbers that have a reminder of 2(rule 3) and add these to the answer list. We need to choose from the 3 options such that the total number of digits is maximized, Also, while choosing numbers for the 1 and 2 lists if we choose the largest numbers from the list we would be making sure that the resulting number is maximum.  
-  
+<br/>
 Let us take an example, the array \[3, 1, 4, 1, 5, 9\] would be split apart into 3 groups \[3, 9\] with reminder 0, \[1, 4, 1\] with a reminder of 1 and \[5\] with reminder of 2. We can add all the numbers from the group of 0 to the result list. We are left with 2 groups, \[1, 4, 1\] with reminder 1 and \[5\] with reminder 2 and we can either add \[4\] (largest element) from group 1 and \[5\] largest element from group 2 or we can add \[1, 4, 1\] (largest 3 elements) from group 1. In this case we can see that adding \[4, 5\] to the result list adds 2 elements while adding \[1, 4, 1\] adds 3 elements to the result list. Hence, we would add \[1, 4, 1\] to the result list and then sort the list in descending order. In general if we had x and y elements in the lists with reminder 1 and 2, than we try to see if x == y in which case we can add all the elements. If not we can see if the count of the remaining elements(assuming we applied rule 1 until we ran out of either 1s or 2s, the remaining elements of this operation) is divisble by 3, if it is than we add all the elements to the list. If not then we check the reminder of the remaining elements, if it is 2 than we can optimize this by forming one less pair during the application of rule 1 and if it is 1 than we would need to leave out one element from the remaining elements. Ex, if we have 1, 1, 4, 4 from the reminder 1 list and 2, 5 from reminder 2 list, if we paired the two 4s with 5 and 2 then we would be wasting the two 1s. Insted we can form 1 less pair, by only adding one 4 and one 5 to the result list and than later adding 1, 1, 4 to the result list.  
-  
-The code for the aboe logic in python is as below.  
+<br/>
+The code for the aboe logic in python is as below. 
+<br/> 
 ```python
 def calc_counts(c1, c2):
     if c2 == 0:
@@ -237,15 +241,16 @@ def answer(l):
         return 0
     return int(ret)
 ```
-  
-  
-  
-  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
 #### Round 3  
-
+<br/>
 **Queue To Do**  
-  
+<br/>
 ```python
 """
 Queue To Do
@@ -289,20 +294,20 @@ Output:
 
 """
 ```
-  
+<br/>
 **APPROACH**
-  
+<br/>
 This problem is a simple one. The XOR of the numbers from 1 to n numbers follows a fixed pattern. If n modulo 4 is 0 then the XOR from 1 to n is 0 then the answer is 0, if it is 1 then the answer 1, if it is 2 then it is n + 1 and if it is 3 then the answer is 0. Let us call the method to perform this as XOR. We can exploit this property and find the XORs at appropriate position in each row.  
-  
+<br/>
 For ex,  
-  
+<br/>
 17 18 19 20 /  
 21 22 23 / 24  
 25 26 / 27 28  
 29 / 30 31 32  
-  
+<br/>
 For row 1 we can calculate XOR(17-1) = XOR(16), and then perfrom xor operation with XOR(20). We can continue this process along each row and then combine the results by performing xor. The code for the approach above is below implemented in python language.  
-  
+<br/>
 ```python
 def XOR(n):
     val = n % 4
@@ -326,14 +331,14 @@ def answer(start, length):
         val = val ^ XOR(init + elems) ^ XOR(init)
     return val
 ```  
-  
-  
-  
-  
-  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
 **Bomb, Baby!**  
-  
+<br/>
 ```python
 """
 Bomb, Baby!
@@ -369,15 +374,15 @@ Output:
     (string) "4"
 """
 ```  
-  
+<br/>
 **APPROACH**  
-  
+<br/>
 This problem upon initial inspection seems to belong to be a direct application of BFS. But then when I took a look at the constraints it seemed to be impossible to ever find a solution using the approach as M and F could be in the range of $$10^50$$.  
-  
+<br/>
 The solution to this problem lies in the final state (M, F) instead of (1, 1) inital state. The simple intuition that if M is larger than F implies that F was added to M in the previous step helps in solving the problem. Also, note that doing simple subtraction would also not be feasible to compute, for ex. $$(M, F) = (10^50, 1)$$ would take a huge amount of time to compute. Hence, we can use a modulo operator and the total number of steps can be computed by /. That if we were asked (M ,F) as (11, 29) then we can use module operator to obtain (11, 29 % 11) = (11, 7) as the next stage with *int*(29/11) = 2 number of steps added to the result.  
-  
+<br/>
 The code for this approach is coded as below.  
-  
+<br/>
 ```python
 def answer(M, F):
     m, f = long(M), long(F)
@@ -392,9 +397,14 @@ def answer(M, F):
             m, f = f, m % f
     return str(total)
 ```
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
 **Doomsday Fuel**
-
+<br/>
 ```python
 """
 Doomsday Fuel
@@ -440,14 +450,15 @@ Inputs:
     (int) m = [[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
 Output:
     (int list) [0, 3, 2, 9, 14]
+"""
 ```  
-  
+<br/>
 **APPROACH**  
-  
+<br/>
 The problem described is a [Absorbing MArkov Chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain){:target="_blank"}. The main challenge involved in this is the [Matrix Inverse using Gaussian elimination](https://en.wikipedia.org/wiki/Invertible_matrix#Gaussian_elimination){:target="_blank"}. It is a straight forward implementation once the theory behind it is understood.  
-  
+<br/>
 The code for the above problem in python is as below.  
-  
+<br/>
 ```python
 from fractions import Fraction
 
@@ -580,11 +591,280 @@ def answer(mat):
     res.append(l)
     return res
 ```  
-  
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
+#### Round 4  
 
+**Free the Bunny Prisoners**  
+<br/> 
+```python
+"""
+Free the Bunny Prisoners
+========================
 
+You need to free the bunny prisoners before Commander Lambda's space station explodes! Unfortunately, the commander was very careful with her highest-value prisoners - they're all held in separate, maximum-security cells. The cells are opened by putting keys into each console, then pressing the open button on each console simultaneously. When the open button is pressed, each key opens its corresponding lock on the cell. So, the union of the keys in all of the consoles must be all of the keys. The scheme may require multiple copies of one key given to different minions.
 
+The consoles are far enough apart that a separate minion is needed for each one. Fortunately, you have already freed some bunnies to aid you - and even better, you were able to steal the keys while you were working as Commander Lambda's assistant. The problem is, you don't know which keys to use at which consoles. The consoles are programmed to know which keys each minion had, to prevent someone from just stealing all of the keys and using them blindly. There are signs by the consoles saying how many minions had some keys for the set of consoles. You suspect that Commander Lambda has a systematic way to decide which keys to give to each minion such that they could use the consoles.
 
+You need to figure out the scheme that Commander Lambda used to distribute the keys. You know how many minions had keys, and how many consoles are by each cell.  You know that Command Lambda wouldn't issue more keys than necessary (beyond what the key distribution scheme requires), and that you need as many bunnies with keys as there are consoles to open the cell.
 
-  
+Given the number of bunnies available and the number of locks required to open a cell, write a function answer(num_buns, num_required) which returns a specification of how to distribute the keys such that any num_required bunnies can open the locks, but no group of (num_required - 1) bunnies can.
+
+Each lock is numbered starting from 0. The keys are numbered the same as the lock they open (so for a duplicate key, the number will repeat, since it opens the same lock). For a given bunny, the keys they get is represented as a sorted list of the numbers for the keys. To cover all of the bunnies, the final answer is represented by a sorted list of each individual bunny's list of keys.  Find the lexicographically least such key distribution - that is, the first bunny should have keys sequentially starting from 0.
+
+num_buns will always be between 1 and 9, and num_required will always be between 0 and 9 (both inclusive).  For example, if you had 3 bunnies and required only 1 of them to open the cell, you would give each bunny the same key such that any of the 3 of them would be able to open it, like so:
+[
+  [0],
+  [0],
+  [0],
+]
+If you had 2 bunnies and required both of them to open the cell, they would receive different keys (otherwise they wouldn't both actually be required), and your answer would be as follows:
+[
+  [0],
+  [1],
+]
+Finally, if you had 3 bunnies and required 2 of them to open the cell, then any 2 of the 3 bunnies should have all of the keys necessary to open the cell, but no single bunny would be able to do it.  Thus, the answer would be:
+[
+  [0, 1],
+  [0, 2],
+  [1, 2],
+]
+
+Test cases
+==========
+
+Inputs:
+    (int) num_buns = 2
+    (int) num_required = 1
+Output:
+    (int) [[0], [0]]
+
+Inputs:
+    (int) num_buns = 5
+    (int) num_required = 3
+Output:
+    (int) [[0, 1, 2, 3, 4, 5], [0, 1, 2, 6, 7, 8], [0, 3, 4, 6, 7, 9], [1, 3, 5, 6, 8, 9], [2, 4, 5, 7, 8, 9]]
+
+Inputs:
+    (int) num_buns = 4
+    (int) num_required = 4
+Output:
+    (int) [[0], [1], [2], [3]]
+"""
+```
+<br/>
+**APPROACH**  
+<br/>
+This problem is a based on combinatorics. To make to notation clear, let us consider that there are *b* bunnies and *r* are required. Let us now consider this simple situation, let us say we have chosen *r-1* bunnies at random, and we were to choose 1 more bunny to get the complete set of keys to open the prison door. We know that these *r-1* bunnies cannot open the door in itself and hence the remaining *b-r+1* bunnies must have a key that these *r-1* bunnies don't. We can exploit this fact to solve the problem. We need to generate all combinations of size *b-r+1* bunnies and add a unique key to each of these bunnies. The code for this in python is as below.  
+<br/>
+```python
+from itertools import combinations
+
+def answer(num_buns, num_required):
+    buns = [[] for i in range(num_buns)]
+    if num_required == 0:
+        return buns
+    start = 0
+    for c in combinations(buns, num_buns - num_required + 1):
+        for item in c:
+            item.append(start)
+        start += 1
+    return buns
+```  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+**Escape Pods**
+<br/>
+```python
+"""
+Escape Pods
+===========
+
+You've blown up the LAMBCHOP doomsday device and broken the bunnies out of Lambda's prison - and now you need to escape from the space station as quickly and as orderly as possible! The bunnies have all gathered in various locations throughout the station, and need to make their way towards the seemingly endless amount of escape pods positioned in other parts of the station. You need to get the numerous bunnies through the various rooms to the escape pods. Unfortunately, the corridors between the rooms can only fit so many bunnies at a time. What's more, many of the corridors were resized to accommodate the LAMBCHOP, so they vary in how many bunnies can move through them at a time. 
+
+Given the starting room numbers of the groups of bunnies, the room numbers of the escape pods, and how many bunnies can fit through at a time in each direction of every corridor in between, figure out how many bunnies can safely make it to the escape pods at a time at peak.
+
+Write a function answer(entrances, exits, path) that takes an array of integers denoting where the groups of gathered bunnies are, an array of integers denoting where the escape pods are located, and an array of an array of integers of the corridors, returning the total number of bunnies that can get through at each time step as an int. The entrances and exits are disjoint and thus will never overlap. The path element path[A][B] = C describes that the corridor going from A to B can fit C bunnies at each time step.  There are at most 50 rooms connected by the corridors and at most 2000000 bunnies that will fit at a time.
+
+For example, if you have:
+entrances = [0, 1]
+exits = [4, 5]
+path = [
+  [0, 0, 4, 6, 0, 0],  # Room 0: Bunnies
+  [0, 0, 5, 2, 0, 0],  # Room 1: Bunnies
+  [0, 0, 0, 0, 4, 4],  # Room 2: Intermediate room
+  [0, 0, 0, 0, 6, 6],  # Room 3: Intermediate room
+  [0, 0, 0, 0, 0, 0],  # Room 4: Escape pods
+  [0, 0, 0, 0, 0, 0],  # Room 5: Escape pods
+]
+
+Then in each time step, the following might happen:
+0 sends 4/4 bunnies to 2 and 6/6 bunnies to 3
+1 sends 4/5 bunnies to 2 and 2/2 bunnies to 3
+2 sends 4/4 bunnies to 4 and 4/4 bunnies to 5
+3 sends 4/6 bunnies to 4 and 4/6 bunnies to 5
+
+So, in total, 16 bunnies could make it to the escape pods at 4 and 5 at each time step.  (Note that in this example, room 3 could have sent any variation of 8 bunnies to 4 and 5, such as 2/6 and 6/6, but the final answer remains the same.)
+
+Test cases
+==========
+
+Inputs:
+    (int list) entrances = [0]
+    (int list) exits = [3]
+    (int) path = [[0, 7, 0, 0], [0, 0, 6, 0], [0, 0, 0, 8], [9, 0, 0, 0]]
+Output:
+    (int) 6
+
+Inputs:
+    (int list) entrances = [0, 1]
+    (int list) exits = [4, 5]
+    (int) path = [[0, 0, 4, 6, 0, 0], [0, 0, 5, 2, 0, 0], [0, 0, 0, 0, 4, 4], [0, 0, 0, 0, 6, 6], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+Output:
+    (int) 16
+"""
+```
+<br/>
+**APPROACH**  
+<br/>
+This problem states the [Network Flow](https://en.wikipedia.org/wiki/Flow_network){:target="_blank"} and [Dinic's algorithm](https://en.wikipedia.org/wiki/Dinic%27s_algorithm){:taget="_blank"} solves the problem. The python code that solves the problem is as below.  
+<br/>
+```python
+def bfs(matrix, source, destination):
+    visited = [-1 for i in range(len(matrix))]
+    visited[source] = source
+    queue = [source]
+    while len(queue) > 0:
+        top = queue.pop(0)
+        for i in range(len(matrix)):
+            if (matrix[top][i][1] - matrix[top][i][0]) != 0 and visited[i] == -1:
+                if i == destination:
+                    # Get route
+                    visited[destination] = top
+                    path = [destination]
+                    temp = destination
+                    while temp != source:
+                        temp = visited[temp]
+                        path.append(temp)
+                    path.reverse()
+                    # Get flow value and update augmented graph
+                    temp = 1
+                    total = float("inf")
+                    cur = source
+                    while temp != len(path):
+                        entry = matrix[cur][path[temp]]
+                        diff = abs(entry[1]) - entry[0]
+                        total = min(total, diff)
+                        cur = path[temp]
+                        temp += 1
+                    temp = 1
+                    cur = source
+                    while temp != len(path):
+                        entry = matrix[cur][path[temp]]
+                        if entry[1] < 0: # Already augmented need to flip
+                            entry[1] += total
+                        else:
+                            entry[0] += total
+                        entry = matrix[path[temp]][cur]
+                        if entry[1] <= 0: # Already augmented need to flip
+                            entry[1] -= total
+                        else:
+                            entry[0] += total
+                        cur = path[temp]
+                        temp += 1
+                    return True
+                else:
+                    visited[i] = top
+                    queue.append(i)
+    return False
+
+def answer(entrances, exits, path):
+    max_val = sum(list(map(sum, path)))
+    aug = []
+    for i in range(len(path)):
+        aug.append([])
+        for j in range(len(path[i])):
+            aug[i].append([0, path[i][j]])
+        aug[i].append([0, 0])
+        if i in exits:
+            aug[i].append([0, max_val])
+        else:
+            aug[i].append([0, 0])
+    aug.append([])
+    aug.append([])
+    for i in range(len(path[0]) + 2):
+        if i in entrances:
+            aug[-2].append([0, max_val])
+        else:
+            aug[-2].append([0, 0])
+        aug[-1].append([0, 0])
+    while bfs(aug, len(aug)-2, len(aug)-1):
+        pass
+    total = 0
+    for i in range(len(aug)):
+        total += aug[-2][i][0]
+    return total
+```
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+#### Round 5   
+<br/> 
+**Dodge the Lasers!**  
+<br/> 
+```python
+"""
+Dodge the Lasers!
+=================
+
+Oh no! You've managed to escape Commander Lambdas collapsing space station in an escape pod with the rescued bunny prisoners - but Commander Lambda isnt about to let you get away that easily. She's sent her elite fighter pilot squadron after you - and they've opened fire!
+
+Fortunately, you know something important about the ships trying to shoot you down. Back when you were still Commander Lambdas assistant, she asked you to help program the aiming mechanisms for the starfighters. They undergo rigorous testing procedures, but you were still able to slip in a subtle bug. The software works as a time step simulation: if it is tracking a target that is accelerating away at 45 degrees, the software will consider the targets acceleration to be equal to the square root of 2, adding the calculated result to the targets end velocity at each timestep. However, thanks to your bug, instead of storing the result with proper precision, it will be truncated to an integer before adding the new velocity to your current position.  This means that instead of having your correct position, the targeting software will erringly report your position as sum(i=1..n, floor(i*sqrt(2))) - not far enough off to fail Commander Lambdas testing, but enough that it might just save your life.
+
+If you can quickly calculate the target of the starfighters' laser beams to know how far off they'll be, you can trick them into shooting an asteroid, releasing dust, and concealing the rest of your escape.  Write a function answer(str_n) which, given the string representation of an integer n, returns the sum of (floor(1*sqrt(2)) + floor(2*sqrt(2)) + ... + floor(n*sqrt(2))) as a string. That is, for every number i in the range 1 to n, it adds up all of the integer portions of i*sqrt(2).
+
+For example, if str_n was "5", the answer would be calculated as
+floor(1*sqrt(2)) +
+floor(2*sqrt(2)) +
+floor(3*sqrt(2)) +
+floor(4*sqrt(2)) +
+floor(5*sqrt(2))
+= 1+2+4+5+7 = 19
+so the function would return "19".
+
+str_n will be a positive integer between 1 and 10^100, inclusive. Since n can be very large (up to 101 digits!), using just sqrt(2) and a loop won't work. Sometimes, it's easier to take a step back and concentrate not on what you have in front of you, but on what you don't.
+
+Test cases
+==========
+
+Inputs:
+    (string) str_n = "5"
+Output:
+    (string) "19"
+
+Inputs:
+    (string) str_n = "77"
+Output:
+    (string) "4208"
+"""
+```
+<br/>
+**APPROACH**
+<br/>
+Let us first take a look at the problem. Given x, find the sum below,
+<br/>
+$$\floor{sqrt{2}}$$
+<br/>
+Firstly, as the question states $$10^100$$ is too large to compute by a iterative approach. We need to find some sort of equation for the sum in order to solve it.
+<br/>
