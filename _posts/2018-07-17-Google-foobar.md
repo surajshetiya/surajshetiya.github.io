@@ -124,9 +124,9 @@ The question is a bit tricky to understand at first. The question is asking a di
   
 * Get the number of Fibonacci numbers that fit in *total_lambs*
 * Get the total number of power's of 2 that fits in *total_lambs*
-* Return the difference
-<br/>
-The code in python language is as below.
+* Return the difference  
+<br/><br/>
+The code in python language is as below.  
 <br/>
 ```python
 def answer(total_lambs):
