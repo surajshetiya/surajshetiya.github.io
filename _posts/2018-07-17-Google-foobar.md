@@ -905,8 +905,8 @@ def floor_root_2(x):
         for i in range(x):
             ret += long((sqrt_2*(i+1))/ten_power)
         return ret
-    total = long((sqrt_2 * x) / ten_power)
-    ret += (x * total ) - long((total * (total + 1))/2) - floor_root_2(total)
+    last_term = long((sqrt_2 * x) / ten_power)
+    ret += (x * last_term ) - long((last_term * (last_term + 1))/2) - floor_root_2(last_term)
     return ret
     
 def answer(str_n):
