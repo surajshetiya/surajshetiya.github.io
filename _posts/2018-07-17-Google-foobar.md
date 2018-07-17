@@ -864,7 +864,7 @@ Output:
 <br/>
 Let us first take a look at the problem. Given x, find the sum below,
 <br/>
-$$\floor{sqrt{2}}$$
+$$\lfloor{\sqrt{2}}$$
 <br/>
 Firstly, as the question states $$10^100$$ is too large to compute by a iterative approach. We need to find some sort of equation for the sum in order to solve it.
 <br/>
