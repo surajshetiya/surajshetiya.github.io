@@ -875,7 +875,7 @@ $$\lfloor{\sqrt{2}-1}\rfloor + \lfloor{2(\sqrt{2}-1)}\rfloor + \lfloor{3(\sqrt{2
 <br/>
 <br/>
 and terms of the series look like 0 + 0 + 1 + 1 + 2 + ... We can see that the terms of the series is monotonically increasing(always growing). The frequency with which the terms increase in this series is <br/><br/>
-$$\frac{1}{\sqrt2-1}$$, which upon simplification leads to $$\sqrt2+1$$<br/><br/>
+$$\dfrac{1}{\sqrt2-1}$$, which upon simplification leads to $$\sqrt2+1$$<br/><br/>
 Each term of this series indicates the location at which the jump occurs,
 <br/><br/>$$\lceil{\sqrt{2}+1}\rceil, \lceil{2(\sqrt{2}+1)}\rceil, \lceil{3(\sqrt{2}+1)}\rceil, ... , \lceil{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rceil$$<br/><br/>
 i.e. index 3(jump from 0-> 1), 5(1->2), 8(2->3), etc.<br/>
@@ -888,7 +888,8 @@ Let us look at an example below for x = 5
 0 0 0 0 0 0 0 **1** <- Contribution from index 8  
 <br/><br/>
 From the above logic we can see that the sum of the fractional parts can be written as <br/>
-$$x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$, note that we use floor here instead of ceil as we need to include the 1 present at the index as well. We can further rewrite the above equation for SUM as below<br/><br/>
+$$x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
+Note that we use floor here instead of ceil as we need to include the 1 present at the index as well. We can further rewrite the above equation for SUM as below<br/><br/>
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
 <br/>
 Rearranging each of the $$\sqrt(2)+1$$ terms by separating the 1 and $$\sqrt(2)$$ we get <br/><br/>
