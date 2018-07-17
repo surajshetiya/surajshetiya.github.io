@@ -153,11 +153,14 @@ Also, this solution is still not optimized. A further optimization can be done f
   
   
   
-
+  
 
 **Please Pass the Coded Messages**  
 ```python
 """
+Please Pass the Coded Messages
+==============================
+
 You need to pass a message to the bunny prisoners, but to avoid detection, the code you agreed to use is... obscure, to say the least. The bunnies are given food on standard-issue prison plates that are stamped with the numbers 0-9 for easier sorting, and you need to combine sets of plates to create the numbers in the code. The signal that a number is part of the code is that it is divisible by 3. You can do smaller numbers like 15 and 45 easily, but bigger numbers like 144 and 414 are a little trickier. Write a program to help yourself quickly create large numbers for use in the code, given a limited number of plates to work with.
 
 You have L, a list containing some digits (0 to 9). Write a function answer(L) which finds the largest number that can be made from some or all of these digits and is divisible by 3. If it is not possible to make such a number, return 0 as the answer. L will contain anywhere from 1 to 9 digits.  The same digit may appear multiple times in the list, but each element in the list may only be used once.
@@ -177,9 +180,11 @@ Output:
 """
 ```  
   
-Luckily, the question for this problem is straight forward. The intuition behind the solution is that we should as many numbers in the solution as possible. The more the digits the better it is. Also, the numbers should be sorted in descending order. To get to the core of the solution we need to understand the property for divisibility by 3. A number is divisibly by 3 if sum of the digits of the number is divisible by 3. Hence, if we mod the digits by 3, it would fall into 3 categories, namely 0, 1 and 2. All the numbers with a reminder of 0 are themselves divisible by 3 and hence, can be directly used in the answer. As per the reminders of 1 and 2, we can either choose a number that has a reminder as 1 and choose another number that has a reminder as 2(rule 1) and add these to the answer list, or we can choose 3 numbers that have a reminder of 1(rule 2) or 3 numbers that have a reminder of 2(rule 3) and add these to the answer list. We need to choose from the 3 options such that the total number of digits is maximized, Also, while choosing numbers for the 1 and 2 lists if we choose the largest numbers from the list we would be making sure that the resulting number is maximum.  
+**APPROACH**
   
-Let us take an example, the array \[3, 1, 4, 1, 5, 9\] would be split apart into 3 groups \[3, 9\] with reminder 0, \[1, 4, 1\] with a reminder of 1 and \[5\] with reminder of 2. We can add all the numbers from the group of 0 to the result list. We are left with 2 groups, [1, 4, 1] with reminder 1 and \[5\] with reminder 2 and we can either add \[4\] (largest element) from group 1 and \[5\] largest element from group 2 or we can add \[1, 4, 1\] (largest 3 elements) from group 1. In this case we can see that adding \[4, 5\] to the result list adds 2 elements while adding \[1, 4, 1\] adds 3 elements to the result list. Hence, we would add \[1, 4, 1\] to the result list and then sort the list in descending order. In general if we had x and y elements in the lists with reminder 1 and 2, than we try to see if x == y in which case we can add all the elements. If not we can see if the count of the remaining elements(assuming we applied rule 1 until we ran out of either 1s or 2s, the remaining elements of this operation) is divisble by 3, if it is than we add all the elements to the list. If not then we check the reminder of the remaining elements, if it is 2 than we can optimize this by forming one less pair during the application of rule 1. Ex, if we have 1, 1, 4, 4 from the reminder 1 list and 2, 5 from reminder 2 list, if we paired the two 4s with 5 and 2 then we would be wasting the two 1s. Insted we can form 1 less pair, by only adding one 4 and one 5 to the result list and than later adding 1, 1, 4 to the result list.  
+Luckily, the question for this problem is straight forward. The intuition behind the solution is that we should as many numbers in the solution as possible. The more the digits the larger it is. Also, the numbers should be sorted in descending order. To get to the core of the solution we need to understand the property for divisibility by 3. A number is divisibly by 3 if sum of the digits of the number is divisible by 3. Hence, if we modulo the digits by 3, it would fall into 3 categories, namely 0, 1 and 2. All the numbers with a reminder of 0 are themselves divisible by 3 and hence, can be directly used in the answer. As per the reminders of 1 and 2, we can either choose a number that has a reminder as 1 and choose another number that has a reminder as 2(rule 1) and add these to the answer list, or we can choose 3 numbers that have a reminder of 1(rule 2) or 3 numbers that have a reminder of 2(rule 3) and add these to the answer list. We need to choose from the 3 options such that the total number of digits is maximized, Also, while choosing numbers for the 1 and 2 lists if we choose the largest numbers from the list we would be making sure that the resulting number is maximum.  
+  
+Let us take an example, the array \[3, 1, 4, 1, 5, 9\] would be split apart into 3 groups \[3, 9\] with reminder 0, \[1, 4, 1\] with a reminder of 1 and \[5\] with reminder of 2. We can add all the numbers from the group of 0 to the result list. We are left with 2 groups, \[1, 4, 1\] with reminder 1 and \[5\] with reminder 2 and we can either add \[4\] (largest element) from group 1 and \[5\] largest element from group 2 or we can add \[1, 4, 1\] (largest 3 elements) from group 1. In this case we can see that adding \[4, 5\] to the result list adds 2 elements while adding \[1, 4, 1\] adds 3 elements to the result list. Hence, we would add \[1, 4, 1\] to the result list and then sort the list in descending order. In general if we had x and y elements in the lists with reminder 1 and 2, than we try to see if x == y in which case we can add all the elements. If not we can see if the count of the remaining elements(assuming we applied rule 1 until we ran out of either 1s or 2s, the remaining elements of this operation) is divisble by 3, if it is than we add all the elements to the list. If not then we check the reminder of the remaining elements, if it is 2 than we can optimize this by forming one less pair during the application of rule 1 and if it is 1 than we would need to leave out one element from the remaining elements. Ex, if we have 1, 1, 4, 4 from the reminder 1 list and 2, 5 from reminder 2 list, if we paired the two 4s with 5 and 2 then we would be wasting the two 1s. Insted we can form 1 less pair, by only adding one 4 and one 5 to the result list and than later adding 1, 1, 4 to the result list.  
   
 The code for the aboe logic in python is as below.  
 ```python
@@ -232,3 +237,354 @@ def answer(l):
         return 0
     return int(ret)
 ```
+  
+  
+  
+  
+
+#### Round 3  
+
+**Queue To Do**  
+  
+```python
+"""
+Queue To Do
+===========
+
+You're almost ready to make your move to destroy the LAMBCHOP doomsday device, but the security checkpoints that guard the underlying systems of the LAMBCHOP are going to be a problem. You were able to take one down without tripping any alarms, which is great! Except that as Commander Lambda's assistant, you've learned that the checkpoints are about to come under automated review, which means that your sabotage will be discovered and your cover blown - unless you can trick the automated review system.
+
+To trick the system, you'll need to write a program to return the same security checksum that the guards would have after they would have checked all the workers through. Fortunately, Commander Lambda's desire for efficiency won't allow for hours-long lines, so the checkpoint guards have found ways to quicken the pass-through rate. Instead of checking each and every worker coming through, the guards instead go over everyone in line while noting their security IDs, then allow the line to fill back up. Once they've done that they go over the line again, this time leaving off the last worker. They continue doing this, leaving off one more worker from the line each time but recording the security IDs of those they do check, until they skip the entire line, at which point they XOR the IDs of all the workers they noted into a checksum and then take off for lunch. Fortunately, the workers' orderly nature causes them to always line up in numerical order without any gaps.
+
+For example, if the first worker in line has ID 0 and the security checkpoint line holds three workers, the process would look like this:
+0 1 2 /
+3 4 / 5
+6 / 7 8
+where the guards' XOR (^) checksum is 0^1^2^3^4^6 == 2.
+
+Likewise, if the first worker has ID 17 and the checkpoint holds four workers, the process would look like:
+17 18 19 20 /
+21 22 23 / 24
+25 26 / 27 28
+29 / 30 31 32
+which produces the checksum 17^18^19^20^21^22^23^25^26^29 == 14.
+
+All worker IDs (including the first worker) are between 0 and 2000000000 inclusive, and the checkpoint line will always be at least 1 worker long.
+
+With this information, write a function answer(start, length) that will cover for the missing security checkpoint by outputting the same checksum the guards would normally submit before lunch. You have just enough time to find out the ID of the first worker to be checked (start) and the length of the line (length) before the automatic review occurs, so your program must generate the proper checksum with just those two values.
+
+Test cases
+==========
+
+Inputs:
+    (int) start = 0
+    (int) length = 3
+Output:
+    (int) 2
+
+Inputs:
+    (int) start = 17
+    (int) length = 4
+Output:
+    (int) 14
+
+"""
+```
+  
+**APPROACH**
+  
+This problem is a simple one. The XOR of the numbers from 1 to n numbers follows a fixed pattern. If n modulo 4 is 0 then the XOR from 1 to n is 0 then the answer is 0, if it is 1 then the answer 1, if it is 2 then it is n + 1 and if it is 3 then the answer is 0. Let us call the method to perform this as XOR. We can exploit this property and find the XORs at appropriate position in each row.  
+  
+For ex,  
+  
+17 18 19 20 /  
+21 22 23 / 24  
+25 26 / 27 28  
+29 / 30 31 32  
+  
+For row 1 we can calculate XOR(17-1) = XOR(16), and then perfrom xor operation with XOR(20). We can continue this process along each row and then combine the results by performing xor. The code for the approach above is below implemented in python language.  
+  
+```python
+def XOR(n):
+    val = n % 4
+    if val == 0:
+        return n
+    if val == 1:
+        return 1
+    if val == 2:
+        return n + 1
+    return 0
+
+def answer(start, length):
+    if length == 1:
+        return start
+    val = XOR(start + 2*(length-1))
+    if start > 1:
+        val = val ^ XOR(start - 1)
+    for i in range(length-2):
+        elems = length - 2 - i
+        init = start + length*(2 + i) - 1
+        val = val ^ XOR(init + elems) ^ XOR(init)
+    return val
+```  
+  
+  
+  
+  
+  
+
+**Bomb, Baby!**  
+  
+```python
+"""
+Bomb, Baby!
+===========
+
+You're so close to destroying the LAMBCHOP doomsday device you can taste it! But in order to do so, you need to deploy special self-replicating bombs designed for you by the brightest scientists on Bunny Planet. There are two types: Mach bombs (M) and Facula bombs (F). The bombs, once released into the LAMBCHOP's inner workings, will automatically deploy to all the strategic points you've identified and destroy them at the same time. 
+
+But there's a few catches. First, the bombs self-replicate via one of two distinct processes: 
+Every Mach bomb retrieves a sync unit from a Facula bomb; for every Mach bomb, a Facula bomb is created;
+Every Facula bomb spontaneously creates a Mach bomb.
+
+For example, if you had 3 Mach bombs and 2 Facula bombs, they could either produce 3 Mach bombs and 5 Facula bombs, or 5 Mach bombs and 2 Facula bombs. The replication process can be changed each cycle. 
+
+Second, you need to ensure that you have exactly the right number of Mach and Facula bombs to destroy the LAMBCHOP device. Too few, and the device might survive. Too many, and you might overload the mass capacitors and create a singularity at the heart of the space station - not good! 
+
+And finally, you were only able to smuggle one of each type of bomb - one Mach, one Facula - aboard the ship when you arrived, so that's all you have to start with. (Thus it may be impossible to deploy the bombs to destroy the LAMBCHOP, but that's not going to stop you from trying!) 
+
+You need to know how many replication cycles (generations) it will take to generate the correct amount of bombs to destroy the LAMBCHOP. Write a function answer(M, F) where M and F are the number of Mach and Facula bombs needed. Return the fewest number of generations (as a string) that need to pass before you'll have the exact number of bombs necessary to destroy the LAMBCHOP, or the string "impossible" if this can't be done! M and F will be string representations of positive integers no larger than 10^50. For example, if M = "2" and F = "1", one generation would need to pass, so the answer would be "1". However, if M = "2" and F = "4", it would not be possible.
+
+Test cases
+==========
+
+Inputs:
+    (string) M = "2"
+    (string) F = "1"
+Output:
+    (string) "1"
+
+Inputs:
+    (string) M = "4"
+    (string) F = "7"
+Output:
+    (string) "4"
+"""
+```  
+  
+**APPROACH**  
+  
+This problem upon initial inspection seems to belong to be a direct application of BFS. But then when I took a look at the constraints it seemed to be impossible to ever find a solution using the approach as M and F could be in the range of $$10^50$$.  
+  
+The solution to this problem lies in the final state (M, F) instead of (1, 1) inital state. The simple intuition that if M is larger than F implies that F was added to M in the previous step helps in solving the problem. Also, note that doing simple subtraction would also not be feasible to compute, for ex. $$(M, F) = (10^50, 1)$$ would take a huge amount of time to compute. Hence, we can use a modulo operator and the total number of steps can be computed by /. That if we were asked (M ,F) as (11, 29) then we can use module operator to obtain (11, 29 % 11) = (11, 7) as the next stage with *int*(29/11) = 2 number of steps added to the result.  
+  
+The code for this approach is coded as below.  
+  
+```python
+def answer(M, F):
+    m, f = long(M), long(F)
+    total = 0
+    while not (m == 1 and f == 1):
+        if f <= 0 or m <= 0:
+            return "impossible"
+        if f == 1:
+            return str(total + m - 1)
+        else:
+            total += long(m/f)
+            m, f = f, m % f
+    return str(total)
+```
+
+**Doomsday Fuel**
+
+```python
+"""
+Doomsday Fuel
+=============
+
+Making fuel for the LAMBCHOP's reactor core is a tricky process because of the exotic matter involved. It starts as raw ore, then during processing, begins randomly changing between forms, eventually reaching a stable form. There may be multiple stable forms that a sample could ultimately reach, not all of which are useful as fuel. 
+
+Commander Lambda has tasked you to help the scientists increase fuel creation efficiency by predicting the end state of a given ore sample. You have carefully studied the different structures that the ore can take and which transitions it undergoes. It appears that, while random, the probability of each structure transforming is fixed. That is, each time the ore is in 1 state, it has the same probabilities of entering the next state (which might be the same state).  You have recorded the observed transitions in a matrix. The others in the lab have hypothesized more exotic forms that the ore can become, but you haven't seen all of them.
+
+Write a function answer(m) that takes an array of array of nonnegative ints representing how many times that state has gone to the next state and return an array of ints for each terminal state giving the exact probabilities of each terminal state, represented as the numerator for each state, then the denominator for all of them at the end and in simplest form. The matrix is at most 10 by 10. It is guaranteed that no matter which state the ore is in, there is a path from that state to a terminal state. That is, the processing will always eventually end in a stable state. The ore starts in state 0. The denominator will fit within a signed 32-bit integer during the calculation, as long as the fraction is simplified regularly. 
+
+For example, consider the matrix m:
+[
+  [0,1,0,0,0,1],  # s0, the initial state, goes to s1 and s5 with equal probability
+  [4,0,0,3,2,0],  # s1 can become s0, s3, or s4, but with different probabilities
+  [0,0,0,0,0,0],  # s2 is terminal, and unreachable (never observed in practice)
+  [0,0,0,0,0,0],  # s3 is terminal
+  [0,0,0,0,0,0],  # s4 is terminal
+  [0,0,0,0,0,0],  # s5 is terminal
+]
+So, we can consider different paths to terminal states, such as:
+s0 -> s1 -> s3
+s0 -> s1 -> s0 -> s1 -> s0 -> s1 -> s4
+s0 -> s1 -> s0 -> s5
+Tracing the probabilities of each, we find that
+s2 has probability 0
+s3 has probability 3/14
+s4 has probability 1/7
+s5 has probability 9/14
+So, putting that together, and making a common denominator, gives an answer in the form of
+[s2.numerator, s3.numerator, s4.numerator, s5.numerator, denominator] which is
+[0, 3, 2, 9, 14].
+
+Test cases
+==========
+
+Inputs:
+    (int) m = [[0, 2, 1, 0, 0], [0, 0, 0, 3, 4], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+Output:
+    (int list) [7, 6, 8, 21]
+
+Inputs:
+    (int) m = [[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+Output:
+    (int list) [0, 3, 2, 9, 14]
+```  
+  
+**APPROACH**  
+  
+The problem described is a [Absorbing MArkov Chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain){:target="_blank"}. The main challenge involved in this is the [Matrix Inverse using Gaussian elimination](https://en.wikipedia.org/wiki/Invertible_matrix#Gaussian_elimination){:target="_blank"}. It is a straight forward implementation once the theory behind it is understood.  
+  
+The code for the above problem in python is as below.  
+  
+```python
+from fractions import Fraction
+
+def gcd(x, y):
+    def gcd1(x, y):
+        if y == 0:
+            return x
+        return gcd1(y, x%y)
+    return gcd1(abs(x), abs(y))
+
+def simplify(x, y):
+    g = gcd(x, y)
+    return Fraction(long(x/g), long(y/g))
+
+def lcm(x, y):
+    return long(x*y/gcd(x,y))
+
+def transform(mat):
+    sum_list = list(map(sum, mat))
+    bool_indices = list(map(lambda x: x == 0, sum_list))
+    indices = set([i for i, x in enumerate(bool_indices) if x])
+    new_mat = []
+    for i in range(len(mat)):
+        new_mat.append(list(map(lambda x: Fraction(0, 1) if(sum_list[i] == 0) else simplify(x, sum_list[i]), mat[i])))
+    transform_mat = []
+    zeros_mat = []
+    for i in range(len(new_mat)):
+        if i not in indices:
+            transform_mat.append(new_mat[i])
+        else:
+            zeros_mat.append(new_mat[i])
+    transform_mat.extend(zeros_mat)
+    tmat = []
+    for i in range(len(transform_mat)):
+        tmat.append([])
+        extend_mat = []
+        for j in range(len(transform_mat)):
+            if j not in indices:
+                tmat[i].append(transform_mat[i][j])
+            else:
+                extend_mat.append(transform_mat[i][j])
+        tmat[i].extend(extend_mat)
+    return [tmat, len(zeros_mat)]
+
+def copy_mat(mat):
+    cmat = []
+    for i in range(len(mat)):
+        cmat.append([])
+        for j in range(len(mat[i])):
+            cmat[i].append(Fraction(mat[i][j].numerator, mat[i][j].denominator))
+    return cmat
+
+def gauss_elmination(m, values):
+    mat = copy_mat(m)
+    for i in range(len(mat)):
+        index = -1
+        for j in range(i, len(mat)):
+            if mat[j][i].numerator != 0:
+                index = j
+                break
+        if index == -1:
+            raise ValueError('Gauss elimination failed!')
+        mat[i], mat[index] = mat[index], mat[j]
+        values[i], values[index] = values[index], values[i]
+        for j in range(i+1, len(mat)):
+            if mat[j][i].numerator == 0:
+                continue
+            ratio = -mat[j][i]/mat[i][i]
+            for k in range(i, len(mat)):
+                mat[j][k] += ratio * mat[i][k]
+            values[j] += ratio * values[i]
+    res = [0 for i in range(len(mat))]
+    for i in range(len(mat)):
+        index = len(mat) -1 -i
+        end = len(mat) - 1
+        while end > index:
+            values[index] -= mat[index][end] * res[end]
+            end -= 1
+        res[index] = values[index]/mat[index][index]
+    return res
+
+def transpose(mat):
+    tmat = []
+    for i in range(len(mat)):
+        for j in range(len(mat)):
+            if i == 0:
+                tmat.append([])
+            tmat[j].append(mat[i][j])
+    return tmat
+
+def inverse(mat):
+    tmat = transpose(mat)
+    mat_inv = []
+    for i in range(len(tmat)):
+        values = [Fraction(int(i==j), 1) for j in range(len(mat))]
+        mat_inv.append(gauss_elmination(tmat, values))
+    return mat_inv
+
+def mat_mult(mat1, mat2):
+    res = []
+    for i in range(len(mat1)):
+        res.append([])
+        for j in range(len(mat2[0])):
+            res[i].append(Fraction(0, 1))
+            for k in range(len(mat1[0])):
+                res[i][j] += mat1[i][k] * mat2[k][j]
+    return res
+
+def splitQR(mat, lengthR):
+    lengthQ = len(mat) - lengthR
+    Q = []
+    R = []
+    for i in range(lengthQ):
+        Q.append([int(i==j)-mat[i][j] for j in range(lengthQ)])
+        R.append(mat[i][lengthQ:])
+    return [Q, R]
+
+def answer(mat):
+    res = transform(mat)
+    if res[1] == len(mat):
+        return [1, 1]
+    Q, R = splitQR(*res)
+    inv = inverse(Q)
+    res = mat_mult(inv, R)
+    row = res[0]
+    l = 1
+    for item in row:
+        l = lcm(l, item.denominator)
+    res = list(map(lambda x: long(x.numerator*l/x.denominator), row))
+    res.append(l)
+    return res
+```  
+  
+
+
+
+
+
+
+  
