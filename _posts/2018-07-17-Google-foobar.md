@@ -881,11 +881,11 @@ Each term of this series indicates the location at which the jump occurs,
 i.e. index 3(jump from 0-> 1), 5(1->2), 8(2->3), etc.<br/>
 Let us look at an example below for x = 5
 <br/>
-0 0 *1* 1 *2* 2 2 *3* <- Floor fractional parts  
-1 2 *3* 4 *5* 6 7 *8* <- Indexes  
-0 0 *1* 1 1 1 1 1 <- Contribution from index 3  
-0 0 0 0 *1* 1 1 1 <- Contribution from index 5  
-0 0 0 0 0 0 0 *1* <- Contribution from index 8  
+0 0 **1** 1 **2** 2 2 **3** <- Floor fractional parts  
+1 2 **3** 4 **5** 6 7 **8** <- Indexes  
+0 0 **1** 1 1 1 1 1 <- Contribution from index 3  
+0 0 0 0 **1** 1 1 1 <- Contribution from index 5  
+0 0 0 0 0 0 0 **1** <- Contribution from index 8  
 <br/><br/>
 From the above logic we can see that the sum of the fractional parts can be written as $$x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor, \lfloor{2(\sqrt{2}+1)}\rfloor, \lfloor{3(\sqrt{2}+1)}\rfloor, ... , \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$, note that we use floor here instead of ceil as we need to include the 1 present at the index as well. We can further rewrite the above equation for SUM as below<br/><br/>
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor, \lfloor{2(\sqrt{2}+1)}\rfloor, \lfloor{3(\sqrt{2}+1)}\rfloor, ... , \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
@@ -911,3 +911,4 @@ def floor_root_2(x):
 def answer(str_n):
     return str(floor_root_2(long(str_n)))
 ```
+<br/>
