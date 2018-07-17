@@ -894,7 +894,7 @@ $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rflo
 Rearranging each of the $$\sqrt(2)+1$$ terms by separating the 1 and $$\sqrt(2)$$ we get <br/><br/>
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - (1 + 2 + 3 + ... + \lfloor{x(\sqrt{2}-1)}\rfloor) - (\lfloor{\sqrt{2}}\rfloor + \lfloor{2(\sqrt{2})}\rfloor + \lfloor{3(\sqrt{2})}\rfloor + ... + \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2})}\rfloor)$$<br/><br/>
 This would look obvious upon further inspection that the term on the right hand side is $$SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$<br/><br/>
-$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \frac{\lfloor{x(\sqrt{2}-1)}\rfloor(\lfloor{x(\sqrt{2}-1)}\rfloor + 1)}{2} - SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$ <br/><br/>
+$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \dfrac{\lfloor{x(\sqrt{2}-1)}\rfloor(\lfloor{x(\sqrt{2}-1)}\rfloor + 1)}{2} - SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$ <br/><br/>
 The code for the above equation in python is as below.<br/>
 ```python
 def floor_root_2(x):
