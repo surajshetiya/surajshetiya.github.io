@@ -864,7 +864,9 @@ Output:
 <br/>
 Let us first take a look at the problem. Given x, find the sum below,
 <br/>
-$$\lfloor{\sqrt{2}} + \lfloor{2\sqrt{2}} + \lfloor{3\sqrt{2}} + ... + \lfloor{x\sqrt{2}} $$
+$$\lfloor{\sqrt{2}}\rfloor + \lfloor{2\sqrt{2}}\rfloor + \lfloor{3\sqrt{2}}\rfloor + ... + \lfloor{x\sqrt{2}}\rfloor $$
 <br/>
 Firstly, as the question states $$10^{100}$$ is too large to compute by a iterative approach. We need to find some sort of equation for the sum in order to solve it.
 <br/>
+Let SUM denote the sum of the above series to x terms. Separating the fractional and non fractional parts and summing it up yields  
+$$x*(x+1)/2 + \lfloor{\sqrt{2}-1}\rfloor + \lfloor{2(\sqrt{2}-1)}\rfloor + \lfloor{3(\sqrt{2}-1)}\rfloor + ... + \lfloor{x(\sqrt{2}-1)}\rfloor$$. If we only look at the fractional series, it looks like $$\lfloor{\sqrt{2}-1}\rfloor + \lfloor{2(\sqrt{2}-1)}\rfloor + \lfloor{3(\sqrt{2}-1)}\rfloor + ... + \lfloor{x(\sqrt{2}-1)}\rfloor$$ and terms of the series look like 0 + 0 + 1 + 1 + 2 + ... and we can see that the terms of the series is monotonous(always increasing). The frequency with which the terms increase in this series is $$\frac{1}{\sqrt(2)-1}$$, which upon simplification leads to $$\sqrt(2)+1$$. Each term of this series indicates the location at which the jump occurs, $$\lceil{\sqrt{2}+1}\rceil + \lceil{2(\sqrt{2}+1)}\rceil + \lceil{3(\sqrt{2}+1)}\rceil + ... + \lceil{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rceil$$i.e. index 3(jump from 0-> 1), 5(1->2), 8(2->3), etc.
