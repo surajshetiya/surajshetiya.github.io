@@ -887,13 +887,13 @@ Let us look at an example below for x = 5
 0 0 0 0 **1** 1 1 1 <- Contribution from index 5  
 0 0 0 0 0 0 0 **1** <- Contribution from index 8  
 <br/><br/>
-From the above logic we can see that the sum of the fractional parts can be written as $$x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor, \lfloor{2(\sqrt{2}+1)}\rfloor, \lfloor{3(\sqrt{2}+1)}\rfloor, ... , \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$, note that we use floor here instead of ceil as we need to include the 1 present at the index as well. We can further rewrite the above equation for SUM as below<br/><br/>
-$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor, \lfloor{2(\sqrt{2}+1)}\rfloor, \lfloor{3(\sqrt{2}+1)}\rfloor, ... , \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
+From the above logic we can see that the sum of the fractional parts can be written as $$x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$, note that we use floor here instead of ceil as we need to include the 1 present at the index as well. We can further rewrite the above equation for SUM as below<br/><br/>
+$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
 <br/>
 Rearranging each of the $$\sqrt(2)+1$$ terms by separating the 1 and $$\sqrt(2)$$ we get <br/><br/>
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}}\rfloor, \lfloor{2(\sqrt{2})}\rfloor, \lfloor{3(\sqrt{2})}\rfloor, ... , \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2})}\rfloor$$<br/><br/>
 This would look obvious upon further inspection that the term on the right hand side is $$SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$<br/><br/>
-$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$ <br/><br/>
+$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{x(\sqrt{2}-1)}\rfloor - SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$ <br/><br/>
 The code for the above equation in python is as below.<br/>
 ```python
 def floor_root_2(x):
@@ -905,7 +905,7 @@ def floor_root_2(x):
             ret += long((sqrt_2*(i+1))/ten_power)
         return ret
     total = long((sqrt_2 * x) / ten_power)
-    ret += (x * total ) - long((total * (total + 1))/2) - floor_root_2(total)
+    ret += (x * total ) - total - floor_root_2(total)
     return ret
     
 def answer(str_n):
