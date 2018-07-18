@@ -4,10 +4,13 @@ title: Google Foobar
 ---
 
 Recently, when my friend was browsing on the internet and searching for some JavaScript related questions he was posted with a link to the foobar challenge by google. This link acts as a recruiting tool for google. This Google [foobar](https://foobar.withgoogle.com/){:target="_blank"} site allows access to questions only for people with a invite. The link may turn up when using [google.com](https://www.google.com/){:target="_blank"} (may be if you were searching something interesting according to google) or it can be accessed via an invite from a friend(if he/she reaches a certain level in the challenge). In this blog post I will write about the challenge, the problems that were posed for me in challenge and my approach.  
-  
+
+![Level 5]({{site.baseurl}}/images/google_foobar/status.png "Level 5")  
+
 The foobar challenge consisted of 5 levels. Upon completion of a set number of challenges in each level, the user would advance to the next level. The first round consists of a single question(48 hours/question), followed by 2 in the second round(72 hours/question), 3 in the third(96 hours/question), 2 in the fourth(15 days/question) and 1 in the fifth(24 days/question).  
   
 *NOTE*: The code in this entire blog post is written in python 2.7 as google foobar does not allow for 3.5 yet.  
+
 
 #### Round 1  
 <br/>
