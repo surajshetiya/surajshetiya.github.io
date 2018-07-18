@@ -862,9 +862,10 @@ Output:
 <br/>
 **APPROACH**
 <br/>
-Let us first take a look at the problem. Given x, find the sum below,
+First, let us take a look at the problem. Given x, find the sum below,<br/>
 <br/>
 $$\lfloor{\sqrt{2}}\rfloor + \lfloor{2\sqrt{2}}\rfloor + \lfloor{3\sqrt{2}}\rfloor + ... + \lfloor{x\sqrt{2}}\rfloor $$
+<br/>
 <br/>
 Firstly, as the question states $$10^{100}$$ is too large to compute by a iterative approach. We need to find some sort of equation for the sum in order to solve it.
 <br/>
@@ -878,7 +879,7 @@ and terms of the series look like 0 + 0 + 1 + 1 + 2 + ... We can see that the te
 $$\dfrac{1}{\sqrt2-1}$$, which upon simplification leads to $$\sqrt2+1$$<br/><br/>
 Each term of this series indicates the location at which the jump occurs,
 <br/><br/>$$\lceil{\sqrt{2}+1}\rceil, \lceil{2(\sqrt{2}+1)}\rceil, \lceil{3(\sqrt{2}+1)}\rceil, ... , \lceil{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rceil$$<br/><br/>
-i.e. index 3(jump from 0-> 1), 5(1->2), 8(2->3), etc.<br/>
+The series looks like 3, 5, 8, ... with location 3(jump from 0-> 1), 5(1->2), 8(2->3), etc being the positions where the jumps occur.<br/>
 Let us look at an example below for x = 5
 <br/>
 0 0 **1** 1 **2** 2 2 **3** <- Floor fractional parts  
@@ -893,7 +894,7 @@ Note that we use floor here instead of ceil as we need to include the 1 present 
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \lfloor{\sqrt{2}+1}\rfloor - \lfloor{2(\sqrt{2}+1)}\rfloor - \lfloor{3(\sqrt{2}+1)}\rfloor - ... - \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2}+1)}\rfloor$$<br/>
 <br/>
 Rearranging each of the $$\sqrt(2)+1$$ terms by separating the 1 and $$\sqrt(2)$$ we get <br/><br/>
-$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - (1 + 2 + 3 + ... + \lfloor{x(\sqrt{2}-1)}\rfloor) - (\lfloor{\sqrt{2}}\rfloor + \lfloor{2(\sqrt{2})}\rfloor + \lfloor{3(\sqrt{2})}\rfloor + ... + \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor(\sqrt{2})}\rfloor)$$<br/><br/>
+$$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - (1 + 2 + 3 + ... + \lfloor{x(\sqrt{2}-1)}\rfloor) - (\lfloor{\sqrt{2}}\rfloor + \lfloor{2\sqrt{2}}\rfloor + \lfloor{3\sqrt{2}}\rfloor + ... + \lfloor{\lfloor{x(\sqrt{2}-1)}\rfloor\sqrt{2}}\rfloor)$$<br/><br/>
 This would look obvious upon further inspection that the term on the right hand side is $$SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$<br/><br/>
 $$SUM(x) = x*(x+1)/2 + x\lfloor{x(\sqrt{2}-1)}\rfloor - \dfrac{\lfloor{x(\sqrt{2}-1)}\rfloor(\lfloor{x(\sqrt{2}-1)}\rfloor + 1)}{2} - SUM(\lfloor{x(\sqrt{2}-1)}\rfloor)$$ <br/><br/>
 The code for the above equation in python is as below.<br/>
