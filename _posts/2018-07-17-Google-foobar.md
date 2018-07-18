@@ -377,11 +377,11 @@ Output:
 <br/>
 **APPROACH**  
 <br/>
-This problem upon initial inspection seems to belong to be a direct application of BFS. But then when I took a look at the constraints it seemed to be impossible to ever find a solution using the approach as M and F could be in the range of $$10^50$$.  
+This problem upon initial inspection seems to belong to be a direct application of BFS. But then when I took a look at the constraints it seemed to be impossible to ever find a solution using the approach as M and F could be in the range of $$10^{50}$$.  
 <br/>
-The solution to this problem lies in the final state (M, F) instead of (1, 1) inital state. The simple intuition that if M is larger than F implies that F was added to M in the previous step helps in solving the problem. Also, note that doing simple subtraction would also not be feasible to compute, for ex. $$(M, F) = (10^50, 1)$$ would take a huge amount of time to compute. Hence, we can use a modulo operator and the total number of steps can be computed by /. That if we were asked (M ,F) as (11, 29) then we can use module operator to obtain (11, 29 % 11) = (11, 7) as the next stage with *int*(29/11) = 2 number of steps added to the result.  
+The solution to this problem lies in the final state (M, F) instead of (1, 1), the inital state. The simple intuition that if M is larger than F implies that F was added to M in the previous step, helps in solving the problem. Also, note that doing simple subtraction would also not be feasible to compute, for ex. $$(M, F) = (10^{50}, 1)$$ would take a huge amount of time to compute. Hence, we can use a modulo operator and the total number of steps contributed by this step can be computed by division. For ex, if we were asked (M ,F) as (11, 29) then we can use module operator to obtain (11, 29 % 11) = (11, 7) as the next step, with *int*(29/11) = 2 steps added to the result. If you trace the solution of this problem, you will realise that we are finding the number of subtractions required to find the GCD of the two numbers M and F.  
 <br/>
-The code for this approach is coded as below.  
+The code for this approach is as below.  
 <br/>
 ```python
 def answer(M, F):
@@ -455,7 +455,7 @@ Output:
 <br/>
 **APPROACH**  
 <br/>
-The problem described is a [Absorbing MArkov Chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain){:target="_blank"}. The main challenge involved in this is the [Matrix Inverse using Gaussian elimination](https://en.wikipedia.org/wiki/Invertible_matrix#Gaussian_elimination){:target="_blank"}. It is a straight forward implementation once the theory behind it is understood.  
+The problem described is a [Absorbing Markov Chain](https://en.wikipedia.org/wiki/Absorbing_Markov_chain){:target="_blank"}. The main challenge involved in this is the [Matrix Inverse using Gaussian elimination](https://en.wikipedia.org/wiki/Invertible_matrix#Gaussian_elimination){:target="_blank"}. It is a straight forward implementation once the theory behind it is understood.  
 <br/>
 The code for the above problem in python is as below.  
 <br/>
@@ -659,7 +659,7 @@ Output:
 <br/>
 **APPROACH**  
 <br/>
-This problem is a based on combinatorics. To make to notation clear, let us consider that there are *b* bunnies and *r* are required. Let us now consider this simple situation, let us say we have chosen *r-1* bunnies at random, and we were to choose 1 more bunny to get the complete set of keys to open the prison door. We know that these *r-1* bunnies cannot open the door in itself and hence the remaining *b-r+1* bunnies must have a key that these *r-1* bunnies don't. We can exploit this fact to solve the problem. We need to generate all combinations of size *b-r+1* bunnies and add a unique key to each of these bunnies. The code for this in python is as below.  
+This problem is a based on combinatorics. To make to notation clear, let us consider that there are *b* bunnies and *r* are required. Let us now consider this simple situation, let us say we have chosen *r-1* bunnies at random, and we were to choose 1 more bunny to get the complete set of keys to open the prison door. We know that these *r-1* bunnies cannot open the door by themselves and hence the remaining *b-r+1* bunnies must have a key that these *r-1* bunnies don't. We can exploit this property to solve the problem. We need to generate all combinations of size *b-r+1* bunnies and add a unique key to each of these bunnies. The code for this in python is as below.  
 <br/>
 ```python
 from itertools import combinations
@@ -735,7 +735,7 @@ Output:
 <br/>
 **APPROACH**  
 <br/>
-This problem states the [Network Flow](https://en.wikipedia.org/wiki/Flow_network){:target="_blank"} and [Dinic's algorithm](https://en.wikipedia.org/wiki/Dinic%27s_algorithm){:taget="_blank"} solves the problem. The python code that solves the problem is as below.  
+This question states the [Network Flow](https://en.wikipedia.org/wiki/Flow_network){:target="_blank"} problem. [Dinic's algorithm](https://en.wikipedia.org/wiki/Dinic%27s_algorithm){:taget="_blank"} can be used to solve the problem. The python code that solves the problem is as below.  
 <br/>
 ```python
 def bfs(matrix, source, destination):
