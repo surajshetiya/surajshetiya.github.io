@@ -40,7 +40,7 @@ Output:
 <br/>
 **APPROACH**  
 <br/>
-This problem is pretty straight forward. I used a straght forward approach of forming the string of primes until the length required was met. The code to the problem in python below.  
+This problem is pretty straight forward. I iteratively formed the string of primes until the length required was met. The code to the problem in python below.  
 <br/>
 ```python
 def isPrime(n):
@@ -122,8 +122,8 @@ Output:
 <br/>
 The question is a bit tricky to understand at first. The question is asking a difference between number of Fibonacci numbers's sum <= *total_lambs* and number of powers of 2's sum <= *total_lambs* (with a catch in the rule number 4). Once you get hold of the question, the approach is very straight forward  
   
-* Get the number of Fibonacci numbers that fit in *total_lambs*
-* Get the total number of power's of 2 that fits in *total_lambs*
+* Get the number of Fibonacci numbers whose sum that fit in *total_lambs*
+* Get the total number of power's of 2 whtose sum hat fits in *total_lambs*. Note that in case the next power of 2 does not fit but the sum of the previous two does, we add it and count one henchman for it (rule 4)
 * Return the difference  
 <br/><br/>
 The code in python language is as below.  
@@ -187,9 +187,9 @@ Output:
 <br/>
 Luckily, the question for this problem is straight forward. The intuition behind the solution is that we should as many numbers in the solution as possible. The more the digits the larger it is. Also, the numbers should be sorted in descending order. To get to the core of the solution we need to understand the property for divisibility by 3. A number is divisibly by 3 if sum of the digits of the number is divisible by 3. Hence, if we modulo the digits by 3, it would fall into 3 categories, namely 0, 1 and 2. All the numbers with a reminder of 0 are themselves divisible by 3 and hence, can be directly used in the answer. As per the reminders of 1 and 2, we can either choose a number that has a reminder as 1 and choose another number that has a reminder as 2(rule 1) and add these to the answer list, or we can choose 3 numbers that have a reminder of 1(rule 2) or 3 numbers that have a reminder of 2(rule 3) and add these to the answer list. We need to choose from the 3 options such that the total number of digits is maximized, Also, while choosing numbers for the 1 and 2 lists if we choose the largest numbers from the list we would be making sure that the resulting number is maximum.  
 <br/>
-Let us take an example, the array \[3, 1, 4, 1, 5, 9\] would be split apart into 3 groups \[3, 9\] with reminder 0, \[1, 4, 1\] with a reminder of 1 and \[5\] with reminder of 2. We can add all the numbers from the group of 0 to the result list. We are left with 2 groups, \[1, 4, 1\] with reminder 1 and \[5\] with reminder 2 and we can either add \[4\] (largest element) from group 1 and \[5\] largest element from group 2 or we can add \[1, 4, 1\] (largest 3 elements) from group 1. In this case we can see that adding \[4, 5\] to the result list adds 2 elements while adding \[1, 4, 1\] adds 3 elements to the result list. Hence, we would add \[1, 4, 1\] to the result list and then sort the list in descending order. In general if we had x and y elements in the lists with reminder 1 and 2, than we try to see if x == y in which case we can add all the elements. If not we can see if the count of the remaining elements(assuming we applied rule 1 until we ran out of either 1s or 2s, the remaining elements of this operation) is divisble by 3, if it is than we add all the elements to the list. If not then we check the reminder of the remaining elements, if it is 2 than we can optimize this by forming one less pair during the application of rule 1 and if it is 1 than we would need to leave out one element from the remaining elements. Ex, if we have 1, 1, 4, 4 from the reminder 1 list and 2, 5 from reminder 2 list, if we paired the two 4s with 5 and 2 then we would be wasting the two 1s. Insted we can form 1 less pair, by only adding one 4 and one 5 to the result list and than later adding 1, 1, 4 to the result list.  
+Let us take an example, the array \[3, 1, 4, 1, 5, 9\] would be split apart into 3 groups \[3, 9\] with reminder 0, \[1, 4, 1\] with a reminder of 1 and \[5\] with reminder of 2. We can add all the numbers from the group of 0 to the result list. We are left with 2 groups, \[1, 4, 1\] with reminder 1 and \[5\] with reminder 2 and we can either add \[4\] (largest element) from group 1 and \[5\] largest element from group 2 or we can add \[1, 4, 1\] (largest 3 elements) from group 1. In this case we can see that adding \[4, 5\] to the result list adds 2 elements while adding \[1, 4, 1\] adds 3 elements to the result list. Hence, we would add \[1, 4, 1\] to the result list and then sort the list in descending order. In general if we had x and y elements in the lists with reminder 1 and 2, than we try to see if x == y in which case we can add all the elements. If not we can see if the **count** of the remaining elements(assuming we applied rule 1 until we ran out of either 1s or 2s, the remaining elements of this operation) is divisble by 3, if it is than we add all the elements to the list. If not then we check the reminder of the remaining elements, if it is 2 than we can optimize this by forming one less pair during the application of rule 1 and if it is 1 than we would need to leave out one element from the remaining elements. Ex, if we have 1, 1, 4, 4 from the reminder 1 list and 2, 5 from reminder 2 list, if we paired the two 4s with 5 and 2 then we would be wasting the two 1s. Insted we can form 1 less pair, by only adding one 4 and one 5 to the result list and than later adding 1, 1, 4 to the result list.  
 <br/>
-The code for the aboe logic in python is as below. 
+The code for the above logic in python is as below. 
 <br/> 
 ```python
 def calc_counts(c1, c2):
@@ -306,7 +306,7 @@ For ex,
 25 26 / 27 28  
 29 / 30 31 32  
 <br/>
-For row 1 we can calculate XOR(17-1) = XOR(16), and then perfrom xor operation with XOR(20). We can continue this process along each row and then combine the results by performing xor. The code for the approach above is below implemented in python language.  
+For row 1 we can calculate XOR(17-1) = XOR(16), and then perfrom xor operation with XOR(20). For row 2, we can calculate XORs at 21-1 = 20 and 23, for row 3 at 24 and 26. We can continue this process along each row and then combine the results by performing xor. The code for the approach in python language is as below.  
 <br/>
 ```python
 def XOR(n):
