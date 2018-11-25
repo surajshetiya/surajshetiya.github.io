@@ -32,11 +32,13 @@ This web page contains interesting information regarding a number of topics. Als
 	1. [How to become a GOOD Theoretical Physicist](#TP1)
 5. [General Computer Science](#GCS)
 	1. [Design Patterns](#DesignPatterns)
-        2. [C++](#CPP)
+  2. [C++](#CPP)
 6. [Good book reviews or talks](#book_reviews)
 	1. [How to Fail at Almost Everything and Still Win Big](#how_to_fail_at_almost_everything_and_still_win_big)
 7. [Health and fitness](#health_fitness)
 	1. [Kefir](#kefir)
+8. [Hard truth](#hard_truth)
+	1. [Natural exploitation](#natural_exploitation)
 
 # Agriculture <a name="Agriculture" />
 ## Aquaponics <a name="Aquaponics" />
@@ -158,3 +160,33 @@ Author's(Scott Adams - Creator of the character Dilbert) talk on the book
 # Health and Fitness<a name="health_fitness"/>  
 ## Kefir<a name="kefir"/>  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xlZrlm9tsrw" frameborder="0" allowfullscreen></iframe>  
+
+# Hard truth<a name="hard_truth"/>  
+How somethings we take for granted are affecting the world!  
+## Are resources always good ?<a name="natural_exploitation">
+### Exploitation of workers in Nigeria over oil!  
+
+We take oil as a commodity that is being used commonly for everything - commute, power generation(yes, it is replacing coal as of today - 2018), etc.  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vAgw_Zyznx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+### Exploitation of tin in Indonesia
+
+Tin is used in all electronic goods. Yet we never ask where did it come from ?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8QE-qbIm7sk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+### Underwater gold mines in Philippines  
+  
+The lack of money in Philippine combined with the hope that a living can be earned out of mining gold illegaly takes toll on lives and the living conditions of the people. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P1L_pxYZVwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Textile industries polluting rivers in Indonesia  
+  
+The waste from the textile industry in Indonesia is polluting the Citarum river. Lack of sanitation facilities is making the conditions worse due to defecation in the river. The locals also dump the waste in the river making it very polluted. The people of the region use this river for swimming, bathing, drinking and washing dishes!! 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AkSXB-lRAp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### EU expliting Mauritinia's fishes
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d9ztkZUiw9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
